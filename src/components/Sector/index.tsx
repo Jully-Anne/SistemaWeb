@@ -3,13 +3,13 @@ import Divider from '@mui/material/Divider';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
-import FormRealTimeQuery from '../Statistics/Selectors';
-import Chart from '../Statistics/Chart';
+import Card from '../Statistics/ResourceCard';
+import FormRealTimeQuery from '../Statistics/Selector';
 
 
 const mdTheme = createTheme();
 
-function RealTimeStatistics() {
+function Sectors() {
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
         setOpen(!open);
@@ -25,16 +25,19 @@ function RealTimeStatistics() {
                     noWrap
                     sx={{ flexGrow: 1 }}
                 >
-                    Consulta em Tempo Real
+                    Setores
                 </Typography>
             </Title>
             <Divider />
             <FormRealTimeQuery />
             <Divider sx={{position: "relative", top:'1.5rem', left:'0.02rem' }}/>
-            <Chart />
+            <Card />
         </ThemeProvider>
     );
 }
 export default function Index() {
-    return <RealTimeStatistics />;
+    return <Sectors />;
 }
+
+
+

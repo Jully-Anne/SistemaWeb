@@ -3,7 +3,7 @@ import Divider from '@mui/material/Divider';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
-import Card from '../Statistics/Card';
+import Card from '../Statistics/SectorsCard';
 
 
 const mdTheme = createTheme();

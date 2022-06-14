@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, DashboardOutlined, Menu, Person, PieChartOut
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useAuth } from 'react-oidc-context'
 import { Route, Routes, useNavigate } from 'react-router-dom'
-import Sectors from './Sector/Sectors'
+import Sectors from './Sector'
 import Profile from './Profile'
 import Settings from './SettingsCard/index'
 import RealTimeStatistics from './RealTimeStatistics/Index'
