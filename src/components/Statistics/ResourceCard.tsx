@@ -34,7 +34,6 @@ export default function Card() {
         >
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>
                         PC02
                         <Brightness1Icon sx={{ color: "#1AC640", position: 'relative', top: '0.3rem', left: '4rem' }} />
