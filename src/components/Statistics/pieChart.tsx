@@ -6,18 +6,17 @@ export const data = [
   ["Parada", 2],
   ["Sem Programação", 2],
   ["Sem Dados", 2],
-
 ];
 
 export const options = {
-  title: "Disponibilidade",
+  title: "DISPONIBILIDADE", 
+  pieHole: 0.4,
+  fontSize: "15",
+  titleColor: "#1976D2",
   colors: ["#1AC640", "#FF0000", "#808080", "#1C1C1C"],
   legend: { position: "bottom" },
   chartArea: { width: "80%", height: "80%"}
 };
-export const style = {
-  maxWidth: 400,
-}
 
 export function PieChart() {
   return (
@@ -27,8 +26,7 @@ export function PieChart() {
       data={data}
       options={options}
       width="100%"
-      height= "350px"
-      style = {style}   
+      height= "20rem"
     />
   );
 }

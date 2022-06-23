@@ -2,12 +2,11 @@ import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import {Table, TableCell,TableHead, TableRow, Box, Collapse, Button} from '@mui/material';
+import { Table, TableCell, TableHead, TableRow, Box, Collapse, Button, Grid } from '@mui/material';
 import PauseCircleOutlineIcon from '@mui/icons-material/PauseCircleOutline';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import { Typography } from '@mui/material';
-import { Container } from '@mui/system';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 
 //Estilos aplicados a tabela de status de máquina
@@ -35,7 +34,7 @@ const StyledMenu = styled((props: MenuProps) => (
     borderColor: "#DCDCDC",
     marginTop: theme.spacing(0.5),
     minWidth: 180,
-    
+
 
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
@@ -75,7 +74,6 @@ export default function StatusTable() {
       <Button
         id="demo-customized-button"
         aria-controls={open ? 'demo-customized-menu' : undefined}
-        aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         variant="contained"
         disableElevation
@@ -84,8 +82,9 @@ export default function StatusTable() {
         sx={{
           postion: 'absolute',
           height: "100%",
+          width: "6rem",
           padding: '0.1rem',
-          top: '2.5px',
+          top: '0.1rem',
           mb: 1,
           backgroundColor: "#FFFFFF",//Fundo branco com hover desativado
           color: "#1C1C1C",//Letra preta com hover desativado
@@ -136,7 +135,7 @@ export default function StatusTable() {
                   <TableCell>10:05:25</TableCell>
                 </TableRow>
                 <TableRow>
-                <TableCell><Brightness1Icon sx={{ color: "#808080" }} /></TableCell>
+                  <TableCell><Brightness1Icon sx={{ color: "#808080" }} /></TableCell>
                   <TableCell>PC09</TableCell>
                   <TableCell>10:05:25</TableCell>
                 </TableRow>
@@ -146,20 +145,21 @@ export default function StatusTable() {
         </TableRow>
       </StyledMenu>
 
-      <Container sx={{
+      <Grid  sx={{
         "display": 'grid',
-        "grid-template-columns": "repeat(6, 2fr)",
+        "grid-template-columns": "repeat(6, 1.8rem)",
         "postion": 'absolute',
-        "height": "100%",
+        "flex-direction": "row",
+        "justify-items": "center"   
       }}>
-        {<PlayCircleOutlineIcon sx={{ color: "#1AC640" }} />}
-        <Typography> 6 </Typography>
-        {<PauseCircleOutlineIcon sx={{ color: "#FF0000" }} />}
-        <Typography> 5</Typography>
-        {<ErrorOutlineIcon sx={{ color: "#808080" }} />}
-        <Typography> 2 </Typography>
-
-      </Container>
+      
+          {<PlayCircleOutlineIcon sx={{ color: "#1AC640" }} />}
+          <Typography> 6 </Typography>
+          {<PauseCircleOutlineIcon sx={{ color: "#FF0000" }} />}
+          <Typography> 5</Typography>
+          {<ErrorOutlineIcon sx={{ color: "#808080" }} />}
+          <Typography> 2 </Typography>
+      </Grid>
     </div>
 
   );

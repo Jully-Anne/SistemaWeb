@@ -35,7 +35,7 @@ export default function FormRealTimeQuery() {
                 label="Setor"
                 sx={{ width: '100%'}}
               >
-                <MenuItem value={1} >PRP ANÉIS</MenuItem>
+                <MenuItem value={1}>PRP ANÉIS</MenuItem>
                 <MenuItem value={2}>SGP ANÉIS</MenuItem>
                 <MenuItem value={3}>USI GUIAS</MenuItem>
               </Select>

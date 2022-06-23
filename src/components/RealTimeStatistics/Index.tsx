@@ -8,6 +8,7 @@ import { LineChart } from '../Statistics/LineChart';
 import { PieChart } from '../Statistics/pieChart';
 import { Box, Container } from '@mui/system';
 import { Grid, Paper } from '@mui/material';
+import DataProgressBar from '../Statistics/DataProgressBar'
 
 
 
@@ -35,41 +36,57 @@ function RealTimeStatistics() {
             </Title>
             <Divider />
             <FormRealTimeQuery />
-
             <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
-     
-            <Container maxWidth="lg" sx={{ mt: 4, mb: 1}}>
-                <Grid container spacing={3}>
+
+         
+<DataProgressBar />
+            <Divider sx={{ position: 'relative', top: '2.5rem', left: '0.02rem' }} />
+
+            <Container maxWidth="lg" sx={{ mt: 4, mb: 1, ml: -2, mr: 5 }}>
+                <Grid container spacing={2}>
                     {/* LineChart */}
-                    <Grid item xs={12} md={8} lg={9}>
-                        <Paper
+                    <Grid item xs={12} md={10} lg={9}>
+                        <Paper elevation={2}
                             sx={{
-                                p: 1,
+                                mt: 3,
+                                p: 3,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                height: 400,
+                                height: '25rem',
+                                wudth: "100%",
+                                border: 'solid',
+                                borderColor: '#DCDCDC',
+                                borderRadius: '2rem',
+                                textAlign: 'center'
                             }}
                         >
                             <LineChart />
                         </Paper>
                     </Grid>
-                   {/* PieChart */}
-                    <Grid item xs={12} md={1} lg={3}>
-                        <Paper
+
+                    {/* PieChart */}
+                    <Grid item xs={6} md={5} lg={3}>
+                        <Paper elevation={2}
                             sx={{
-                                p: 0,
+                                mt: 3,
+                                ml: 2,
+                                p: 1,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                height: 400,
+                                width: '100%',
+                                minHeight: "15rem",
+                                border: "solid",
+                                borderColor: "#DCDCDC",
+                                borderRadius: "2rem",
                             }}
                         >
                             <PieChart />
                         </Paper>
                     </Grid>
                 </Grid>
-      
+
             </Container>
-   
+
         </ThemeProvider >
     );
 }

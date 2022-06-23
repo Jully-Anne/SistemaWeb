@@ -9,25 +9,24 @@ export const data = [
 ];
 
 export const options = {
-  title: "Produtividade - Produção",
+  title: "PRODUTIVIDADE-PRODUÇÃO",
+  fontSize: "15",
+  titleColor: "#1976D2",
   curveType: "function",
   legend: { position: "bottom" },
-  chartArea: { width: "100%", height: "80%"}
+  chartArea: { width: "100%", height: "80%"},
+
 };
 export const style = {
-  maxWidth: 752,
-
+  maxWidth: '100%',
 }
-
 
 export function LineChart() {
   return (
-
-  
     <Chart
       chartType="LineChart"
       width="100%"
-      height="350px"
+      height="22rem"
       data={data}
       options={options}
       style = {style}
