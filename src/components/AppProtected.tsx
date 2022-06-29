@@ -1,14 +1,18 @@
 import React from 'react'
 import { Box, CssBaseline, Toolbar, IconButton, Typography, Button, Avatar, Drawer, Divider, CSSObject, styled, Theme, useTheme, AppBarProps, AppBar, ListItemIcon, ListItemText, ListItemButton, Paper, List } from '@mui/material'
-import { ChevronLeft, ChevronRight, DashboardOutlined, Menu, Person, PieChartOutline, PrecisionManufacturing } from '@mui/icons-material'
+import { ChevronLeft, ChevronRight, DashboardOutlined, Menu, Person, PrecisionManufacturing } from '@mui/icons-material'
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useAuth } from 'react-oidc-context'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Sectors from './Sector'
 import Profile from './Profile'
-import Settings from './SettingsCard/index'
-import RealTimeStatistics from './RealTimeStatistics/Index'
+import Settings from './Settings/index'
+import ResourceRealTimeAnalysis from './ResourceRealTimeAnalysis/Index'
+import ResourceHistoricalAnalysis from './ResourceHistoricalAnalysis/Index'
 import Dashboard from './Dashboard/index'
+import FadeMenu from './GeneralComponents/AcordeonMenu';
+import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
+
 
 const drawerWidth = 200
 
@@ -148,12 +152,20 @@ const AppProtected = () => {
 
   const AppMenu = () => {
     return (
-      <Paper sx={{ width: 320, maxWidth: '100%' }}>
+      <Paper sx={{ width: '20rem', maxWidth: '100%' }}>
         <List>
           <AppMenuItem to="/dashboard" label="Dashboard" icon={<DashboardOutlined />} />
+
+          <Divider />
+
           <AppMenuItem to="/sectors" label="Setores" icon={<PrecisionManufacturing />} />
-          <AppMenuItem to="/statistics" label="Estatísticas" icon={<PieChartOutline />} />
+
+          <CustomizedAccordions />
+
           <AppMenuItem to="/settings" label="Configurações" icon={<SettingsIcon />} />
+
+          <Divider />
+
           <AppMenuItem to="/login" label="Login" icon={<Person />} />
         </List>
       </Paper>
@@ -175,6 +187,7 @@ const AppProtected = () => {
               ...(open && { display: 'none' })
             }}
           >
+        
             <Menu />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Sistema Supervisório</Typography>
@@ -195,12 +208,19 @@ const AppProtected = () => {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <Routes>
+
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sectors" element={<Sectors />} />
-          <Route path='/statistics' element={<RealTimeStatistics />} />
+          <Route path='/resourceRealTimeAnalysis' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/resourceHistoricalAnalysis' element={<ResourceHistoricalAnalysis />} />
+          <Route path='/furnaceRealTimeAnalysis' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/furnaceHistoricalAnalysis' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/furnaceHistoricalAlarmsAnalysis' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/furnaceTemperatureLimits' element={<ResourceRealTimeAnalysis />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/login" element={<Profile />} />
+
         </Routes>
       </Box>
     </Box>

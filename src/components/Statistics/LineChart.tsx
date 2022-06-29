@@ -14,7 +14,7 @@ export const options = {
   titleColor: "#1976D2",
   curveType: "function",
   legend: { position: "bottom" },
-  chartArea: { width: "100%", height: "80%"},
+  chartArea: { width: "85%", height: "70%"},
 
 };
 export const style = {
@@ -26,7 +26,7 @@ export function LineChart() {
     <Chart
       chartType="LineChart"
       width="100%"
-      height="22rem"
+      height="20rem"
       data={data}
       options={options}
       style = {style}

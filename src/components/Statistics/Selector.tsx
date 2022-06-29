@@ -12,14 +12,12 @@ import Button from '@mui/material/Button';
 export default function FormRealTimeQuery() {
 
   const [sector, setSector] = React.useState('');
-  const [resource, setResource] = React.useState('');
+
 
   const handleChangeSector = (event: SelectChangeEvent) => {
     setSector(event.target.value);
   }
-  const handleChangeResource = (event: SelectChangeEvent) => {
-    setResource(event.target.value);
-  }
+
   return (
     <div>
      <Box sx={{ maxWidth: 600, width: '100%', position: 'relative', top:'0.8rem', left:'0.02rem' }}>

@@ -14,7 +14,7 @@ import DataProgressBar from '../Statistics/DataProgressBar'
 
 const mdTheme = createTheme();
 
-function RealTimeStatistics() {
+function ResourceRealTimeAnalysis() {
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
         setOpen(!open);
@@ -91,7 +91,7 @@ function RealTimeStatistics() {
     );
 }
 export default function Index() {
-    return <RealTimeStatistics />;
+    return <ResourceRealTimeAnalysis />;
 }
 
 

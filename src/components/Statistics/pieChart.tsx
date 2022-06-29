@@ -17,6 +17,9 @@ export const options = {
   legend: { position: "bottom" },
   chartArea: { width: "80%", height: "80%"}
 };
+export const style = {
+  maxWidth: '100%',
+}
 
 export function PieChart() {
   return (
@@ -27,6 +30,7 @@ export function PieChart() {
       options={options}
       width="100%"
       height= "20rem"
+      style = {style}
     />
   );
 }
