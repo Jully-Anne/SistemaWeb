@@ -3,12 +3,14 @@ import Divider from '@mui/material/Divider';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
-import FormRealTimeQuery from '../Statistics/Selectors';
-import { LineChart } from '../Statistics/LineChart';
-import { PieChart } from '../Statistics/pieChart';
-import { Box, Container } from '@mui/system';
+import { LineChart } from '../StatisticsComponents/LineChart';
+import { PieChart } from '../StatisticsComponents/PieChart';
+import { Container } from '@mui/system';
 import { Grid, Paper } from '@mui/material';
-import DataProgressBar from '../Statistics/DataProgressBar'
+import DataProgressBar from '../StatisticsComponents/DataProgressBar'
+import DateSelector from '../GeneralComponents/DateSelector'
+import QueryButton from '../GeneralComponents/QueryButton'
+import Selectors from '../GeneralComponents/Selectors'
 
 
 
@@ -35,11 +37,34 @@ function ResourceHistoricalAnalysis() {
                 </Typography>
             </Title>
             <Divider />
-            <FormRealTimeQuery />
-            <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
+            
+            
+            <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
+                <Grid container>
+                  
+                    <Grid item xs={12} md={10} lg={9}>
+                        <Grid
+                            sx={{
+                                mt: 3,
+                                p: 3,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                height: '2rem',
+                                width: "76rem",
+                                alignItems: 'center', 
+                                
+                            }}
+                        >
+                          <Selectors />
+                            <DateSelector />
+                            <QueryButton />
+                        </Grid>
+                    </Grid>
+                    </Grid>
 
-         
-<DataProgressBar />
+            </Container>
+            <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
+            <DataProgressBar />
             <Divider sx={{ position: 'relative', top: '2.5rem', left: '0.02rem' }} />
 
             <Container maxWidth="lg" sx={{ mt: 4, mb: 1, ml: -2, mr: 5 }}>
@@ -53,7 +78,7 @@ function ResourceHistoricalAnalysis() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 height: '25rem',
-                                wudth: "100%",
+                                width: "100%",
                                 border: 'solid',
                                 borderColor: '#DCDCDC',
                                 borderRadius: '2rem',

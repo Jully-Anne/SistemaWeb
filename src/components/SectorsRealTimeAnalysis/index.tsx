@@ -3,8 +3,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
-import Card from '../Statistics/ResourceCard';
-import FormRealTimeQuery from '../Statistics/Selector';
+import Card from '../StatisticsComponents/ResourceCard';
+import FormRealTimeQuery from '../GeneralComponents/Selector';
 
 
 const mdTheme = createTheme();

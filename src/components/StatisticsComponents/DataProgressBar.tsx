@@ -68,17 +68,21 @@ export default function ProgressBar() {
 
         </Paper>
       </React.Fragment>
-      <Grid item xs={1} md={10} lg={1}>
+      <React.Fragment>
+        <Paper elevation={2}>
+          <Grid item xs={1} md={10} lg={1}>
 
-        <Typography color="primary"  sx={{ flex: 1 }}>
-          LOTE
-        </Typography>
+            <Typography color="primary" sx={{ flex: 1 }}>
+              LOTE
+            </Typography>
 
-        <Typography color="#1C1C1C" sx={{ flex: 1 }}>
+            <Typography color="#1C1C1C" sx={{ flex: 1 }}>
               65234
             </Typography>
-      </Grid>
-      <React.Fragment>
+          </Grid>
+
+        </Paper>
+    
         <Paper elevation={2}>
           <Grid item xs={1} md={10} lg={1}>
 

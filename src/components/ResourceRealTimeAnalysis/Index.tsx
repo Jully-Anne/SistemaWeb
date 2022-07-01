@@ -1,14 +1,14 @@
+import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
-import React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
-import FormRealTimeQuery from '../Statistics/Selectors';
-import { LineChart } from '../Statistics/LineChart';
-import { PieChart } from '../Statistics/pieChart';
-import { Box, Container } from '@mui/system';
+import FormRealTimeQuery from '../GeneralComponents/Selectors';
+import { LineChart } from '../StatisticsComponents/LineChart';
+import { PieChart } from '../StatisticsComponents/PieChart';
+import { Container } from '@mui/system';
 import { Grid, Paper } from '@mui/material';
-import DataProgressBar from '../Statistics/DataProgressBar'
+import DataProgressBar from '../StatisticsComponents/DataProgressBar'
 
 
 
@@ -37,9 +37,7 @@ function ResourceRealTimeAnalysis() {
             <Divider />
             <FormRealTimeQuery />
             <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
-
-         
-<DataProgressBar />
+            <DataProgressBar />
             <Divider sx={{ position: 'relative', top: '2.5rem', left: '0.02rem' }} />
 
             <Container maxWidth="lg" sx={{ mt: 4, mb: 1, ml: -2, mr: 5 }}>
