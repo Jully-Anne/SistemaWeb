@@ -13,11 +13,13 @@ export default function SelectorData() {
     <div >
 
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <Stack spacing={3}
+        <Stack spacing={2}
           direction='row'
           sx={{
             display: 'flex',
-            margin: '10%'
+            margin: '5%', 
+            width: '36rem'
+          
 
           }}>
           <DateTimePicker
@@ -25,19 +27,16 @@ export default function SelectorData() {
             label="Data Inicial"
             value={dataInicial}
             inputFormat="dd/MM/yyyy hh:mm a"
-            onChange={(newValue) => {
-              setDataInicial(newValue);
-
-            }}
+            onChange={(newValue) => {setDataInicial(newValue)}}
+    
           />
           <DateTimePicker
             renderInput={(props) => <TextField {...props} />}
             label="Data Final"
             value={dataFinal}
             inputFormat="dd/MM/yyyy hh:mm a"
-            onChange={(newValue) => {
-              setDataFinal(newValue);
-            }}
+            onChange={(newValue) => setDataFinal(newValue)}
+      
           />
         </Stack>
       </LocalizationProvider>

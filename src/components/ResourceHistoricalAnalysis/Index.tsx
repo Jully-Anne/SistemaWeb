@@ -37,30 +37,29 @@ function ResourceHistoricalAnalysis() {
                 </Typography>
             </Title>
             <Divider />
-            
-            
+
+
             <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
                 <Grid container>
-                  
+
                     <Grid item xs={12} md={10} lg={9}>
                         <Grid
                             sx={{
                                 mt: 3,
-                                p: 3,
+                                p: 1,
                                 display: 'flex',
                                 flexDirection: 'row',
                                 height: '2rem',
-                                width: "76rem",
-                                alignItems: 'center', 
-                                
+                                width: "60rem",
+                                alignItems: 'center'
                             }}
                         >
-                          <Selectors />
+                            <Selectors />
                             <DateSelector />
                             <QueryButton />
                         </Grid>
                     </Grid>
-                    </Grid>
+                </Grid>
 
             </Container>
             <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />

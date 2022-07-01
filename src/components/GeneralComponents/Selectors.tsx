@@ -25,6 +25,7 @@ export default function Selectors() {
           value={sector}
           label="Setor"
           onChange={handleChangeSector}
+          sx={{height: '3rem'}}
         >
       
           <MenuItem value={10}>BALANÇAS</MenuItem>
@@ -45,6 +46,7 @@ export default function Selectors() {
           value={resource}
           label="Máquina"
           onChange={handleChangeResource}
+          sx={{height: '3rem'}}
         >
           
           <MenuItem value={10}>PC02</MenuItem>
