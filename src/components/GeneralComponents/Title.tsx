@@ -1,3 +1,4 @@
+//Title - Componente de título genérico para o título de cada página do sistema
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 

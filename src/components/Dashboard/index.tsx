@@ -1,9 +1,10 @@
+//Tela Dashboard-Tela inicial do sistema com informações gerais de cada setor
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
-import Card from '../StatisticsComponents/SectorsCard';
+import SectorsCard from '../StatisticsComponents/SectorsCard';
 
 
 const mdTheme = createTheme();
@@ -28,7 +29,7 @@ function Dashboard() {
                 </Typography>
             </Title>
             <Divider />
-            <Card />
+            <SectorsCard />
         </ThemeProvider>
     );
 }

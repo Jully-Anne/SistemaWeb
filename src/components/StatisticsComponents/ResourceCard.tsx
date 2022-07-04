@@ -20,8 +20,8 @@ export default function Card() {
                 flexWrap: 'wrap',
                 '& > :not(style)': {
                     m: 1,
-                    width: 225,
-                    height: 275,
+                    width: '14rem',
+                    height: '17.5rem',
                     position: 'relative',
                     top: "2.5rem",
                     border: "solid",

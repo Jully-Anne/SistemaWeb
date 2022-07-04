@@ -1,3 +1,4 @@
+//Settings - Tela com as opções de configuração do setor
 import { Typography } from "@mui/material";
 import { createTheme } from '@material-ui/core/styles';
 

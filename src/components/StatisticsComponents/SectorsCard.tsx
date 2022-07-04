@@ -13,7 +13,7 @@ import StatusTable from './StatusTableSectors';
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
-export default function Card() {
+export default function SectorsCard() {
     return (
 
         <Box
@@ -22,8 +22,8 @@ export default function Card() {
                 flexWrap: 'wrap',
                 '& > :not(style)': {
                     m: 1,
-                    width: 225,
-                    height: 275,
+                    width: '14rem',
+                    height: '17rem',
                     border: "solid",
                     borderColor: "#DCDCDC",
                     borderRadius: '10%',
@@ -35,6 +35,33 @@ export default function Card() {
             <React.Fragment>
                 <Paper elevation={2}>
 
+                    <Title>Balanças</Title>
+                    <Divider sx={{ background: "#DCDCDC" }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
+                        DISPONIBILIDADE
+                    </Typography>
+                    <LinearProgressWithLabel />
+                    <Divider sx={{ background: "#DCDCDC" }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
+                        EFICIÊNCIA
+                    </Typography>
+                    <LinearProgressWithLabel />
+                    <Divider sx={{ background: "#DCDCDC" }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
+                        PRODUÇÃO
+                    </Typography>
+                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
+                        26531/65412
+                    </Typography>
+                    <LinearProgressWithLabel />
+                    <Divider sx={{ background: "#DCDCDC" }} />
+                    <Container>
+                       <StatusTable />
+                    </Container>
+                </Paper>
+            </React.Fragment>
+            <React.Fragment>
+                <Paper elevation={2}>
                     <Title>Primeira Prensagem</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>

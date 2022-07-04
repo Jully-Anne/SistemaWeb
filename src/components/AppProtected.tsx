@@ -10,7 +10,6 @@ import Settings from './Settings/index'
 import ResourceRealTimeAnalysis from './ResourceRealTimeAnalysis/Index'
 import ResourceHistoricalAnalysis from './ResourceHistoricalAnalysis/Index'
 import Dashboard from './Dashboard/index'
-import FadeMenu from './GeneralComponents/AcordeonMenu';
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
 
 
@@ -155,17 +154,11 @@ const AppProtected = () => {
       <Paper sx={{ width: '20rem', maxWidth: '100%' }}>
         <List>
           <AppMenuItem to="/dashboard" label="Dashboard" icon={<DashboardOutlined />} />
-
           <Divider />
-
           <AppMenuItem to="/sectors" label="Setores" icon={<PrecisionManufacturing />} />
-
           <CustomizedAccordions />
-
           <AppMenuItem to="/settings" label="Configurações" icon={<SettingsIcon />} />
-
           <Divider />
-
           <AppMenuItem to="/login" label="Login" icon={<Person />} />
         </List>
       </Paper>
@@ -186,8 +179,7 @@ const AppProtected = () => {
               marginRight: 5,
               ...(open && { display: 'none' })
             }}
-          >
-        
+          >   
             <Menu />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Sistema Supervisório</Typography>

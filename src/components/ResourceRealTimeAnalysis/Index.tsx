@@ -1,18 +1,19 @@
+//Resource Real Time Analysis - Tela para consulta e análise de dados das máquinas em tempo real
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-import Title from '../GeneralComponents/Title';
-import FormRealTimeQuery from '../GeneralComponents/Selectors';
-import { LineChart } from '../StatisticsComponents/LineChart';
-import { PieChart } from '../StatisticsComponents/PieChart';
 import { Container } from '@mui/system';
 import { Grid, Paper } from '@mui/material';
+import Title from '../GeneralComponents/Title';
+import Selectors from '../GeneralComponents/Selectors';
 import DataProgressBar from '../StatisticsComponents/DataProgressBar'
-
-
+import QueryButton from '../GeneralComponents/QueryButton'
+import { LineChart } from '../StatisticsComponents/LineChart';
+import { PieChart } from '../StatisticsComponents/PieChart';
 
 const mdTheme = createTheme();
+
 
 function ResourceRealTimeAnalysis() {
     const [open, setOpen] = React.useState(true);
@@ -35,7 +36,28 @@ function ResourceRealTimeAnalysis() {
                 </Typography>
             </Title>
             <Divider />
-            <FormRealTimeQuery />
+
+            <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
+                <Grid container>
+
+                    <Grid item xs={12} md={10} lg={9}>
+                        <Grid
+                            sx={{
+                                mt: 3,
+                                p: 1,
+                                display: 'flex',
+                                flexDirection: 'row',
+                                height: '2rem',
+                                width: "60rem",
+                                alignItems: 'center'
+                            }}
+                        >   <Selectors />
+                          <QueryButton />
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+            </Container>
             <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
             <DataProgressBar />
             <Divider sx={{ position: 'relative', top: '2.5rem', left: '0.02rem' }} />
@@ -49,6 +71,7 @@ function ResourceRealTimeAnalysis() {
                                 mt: 3,
                                 p: 3,
                                 display: 'flex',
+                                flexWrap: 'wrap',
                                 flexDirection: 'column',
                                 height: '25rem',
                                 wudth: "100%",

@@ -1,3 +1,4 @@
+//Resource Historical Analysis- Tela de consutlta e análise de dados históricos das máquinas
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import React from 'react';
@@ -11,7 +12,6 @@ import DataProgressBar from '../StatisticsComponents/DataProgressBar'
 import DateSelector from '../GeneralComponents/DateSelector'
 import QueryButton from '../GeneralComponents/QueryButton'
 import Selectors from '../GeneralComponents/Selectors'
-
 
 
 const mdTheme = createTheme();
@@ -37,8 +37,6 @@ function ResourceHistoricalAnalysis() {
                 </Typography>
             </Title>
             <Divider />
-
-
             <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
                 <Grid container>
 
@@ -60,7 +58,6 @@ function ResourceHistoricalAnalysis() {
                         </Grid>
                     </Grid>
                 </Grid>
-
             </Container>
             <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
             <DataProgressBar />

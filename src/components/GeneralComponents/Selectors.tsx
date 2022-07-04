@@ -1,3 +1,4 @@
+//Selectors - Componente com 2 seletores para a escolha e seleção de setor e máquina para a busca de informações 
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -31,10 +32,10 @@ export default function Selectors() {
           <MenuItem value={10}>BALANÇAS</MenuItem>
           <MenuItem value={20}>INSP FINAL</MenuItem>
           <MenuItem value={30}>PRP ANÉIS</MenuItem>
-          <MenuItem value={30}>PRP GUIAS</MenuItem>
-          <MenuItem value={30}>SGP</MenuItem>
-          <MenuItem value={30}>USI GUIAS</MenuItem>
-          <MenuItem value={30}>USI ANÉIS</MenuItem>
+          <MenuItem value={40}>PRP GUIAS</MenuItem>
+          <MenuItem value={50}>SGP</MenuItem>
+          <MenuItem value={60}>USI GUIAS</MenuItem>
+          <MenuItem value={70}>USI ANÉIS</MenuItem>
         </Select>
  
       </FormControl>
