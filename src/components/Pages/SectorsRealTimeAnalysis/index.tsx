@@ -3,10 +3,10 @@ import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-import Title from '../GeneralComponents/Title';
-import Card from '../StatisticsComponents/ResourceCard';
-import Selector from '../GeneralComponents/Selector';
-import QueryButton from '../GeneralComponents/QueryButton';
+import Title from '../../GeneralComponents/Title';
+import Card from '../../StatisticsComponents/ResourceCard';
+import Selector from '../../GeneralComponents/Selector';
+import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
 

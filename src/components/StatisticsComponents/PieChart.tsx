@@ -18,7 +18,7 @@ export const options = {
   chartArea: { width: "80%", height: "80%"}
 };
 export const style = {
-  maxWidth: '100%',
+  maxWidth: '15rem',
 }
 
 export function PieChart() {

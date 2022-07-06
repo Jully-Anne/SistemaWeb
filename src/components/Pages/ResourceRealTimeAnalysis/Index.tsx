@@ -5,16 +5,26 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/system';
 import { Grid, Paper } from '@mui/material';
-import Title from '../GeneralComponents/Title';
-import Selectors from '../GeneralComponents/Selectors';
-import DataProgressBar from '../StatisticsComponents/DataProgressBar'
-import QueryButton from '../GeneralComponents/QueryButton'
-import { LineChart } from '../StatisticsComponents/LineChart';
-import { PieChart } from '../StatisticsComponents/PieChart';
-
-const mdTheme = createTheme();
+import Title from '../../GeneralComponents/Title';
+import Selectors from '../../GeneralComponents/Selectors';
+import DataProgressBar from '../../StatisticsComponents/DataProgressBar'
+import QueryButton from '../../GeneralComponents/QueryButton'
+import { LineChart } from '../../StatisticsComponents/LineChart';
+import { PieChart } from '../../StatisticsComponents/PieChart';
 
 
+
+const mdTheme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
+  });
 function ResourceRealTimeAnalysis() {
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
@@ -65,7 +75,7 @@ function ResourceRealTimeAnalysis() {
             <Container maxWidth="lg" sx={{ mt: 4, mb: 1, ml: -2, mr: 5 }}>
                 <Grid container spacing={2}>
                     {/* LineChart */}
-                    <Grid item xs={12} md={10} lg={9}>
+                    <Grid item xs={9} md={9} lg={9}>
                         <Paper elevation={2}
                             sx={{
                                 mt: 3,
@@ -74,10 +84,8 @@ function ResourceRealTimeAnalysis() {
                                 flexWrap: 'wrap',
                                 flexDirection: 'column',
                                 height: '25rem',
-                                wudth: "100%",
-                                border: 'solid',
-                                borderColor: '#DCDCDC',
-                                borderRadius: '2rem',
+                                width: "100%",
+                                borderRadius: '1rem',
                                 textAlign: 'center'
                             }}
                         >
@@ -86,7 +94,7 @@ function ResourceRealTimeAnalysis() {
                     </Grid>
 
                     {/* PieChart */}
-                    <Grid item xs={6} md={5} lg={3}>
+                    <Grid item xs={3} md={5} lg={5}>
                         <Paper elevation={2}
                             sx={{
                                 mt: 3,
@@ -96,16 +104,14 @@ function ResourceRealTimeAnalysis() {
                                 flexDirection: 'column',
                                 width: '100%',
                                 minHeight: "15rem",
-                                border: "solid",
-                                borderColor: "#DCDCDC",
-                                borderRadius: "2rem",
+                                borderRadius: "1rem",
                             }}
                         >
                             <PieChart />
                         </Paper>
                     </Grid>
                 </Grid>
-
+               
             </Container>
 
         </ThemeProvider >

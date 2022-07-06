@@ -3,8 +3,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import Title from '../GeneralComponents/Title';
-import SectorsCard from '../StatisticsComponents/SectorsCard';
+import Title from '../../GeneralComponents/Title';
+import SectorsCard from '../../StatisticsComponents/SectorsCard';
 
 
 const mdTheme = createTheme();

@@ -4,14 +4,14 @@ import { ChevronLeft, ChevronRight, DashboardOutlined, Menu, Person, PrecisionMa
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useAuth } from 'react-oidc-context'
 import { Route, Routes, useNavigate } from 'react-router-dom'
-import Sectors from './SectorsRealTimeAnalysis'
+import Sectors from './Pages/SectorsRealTimeAnalysis'
 import Profile from './Profile'
-import Settings from './Settings/index'
-import ResourceRealTimeAnalysis from './ResourceRealTimeAnalysis/Index'
-import ResourceHistoricalAnalysis from './ResourceHistoricalAnalysis/Index'
-import Dashboard from './Dashboard/index'
+import Settings from './Pages/Settings/index'
+import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
+import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
+import Dashboard from './Pages/Dashboard/index'
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
-
+import { fontWeight } from '@mui/system';
 
 const drawerWidth = 200
 
@@ -34,7 +34,7 @@ const stringToColor = (string: string) => {
 
   return color
 }
-
+//Avatar de Login de usuário
 const stringAvatar = (name: string) => {
   const names = name.split(' ')
   const firstLetter = name.split(' ')[0][0]
@@ -136,6 +136,7 @@ const AppProtected = () => {
     to: string;
     label: string;
     icon: React.ReactNode;
+                           
   }
 
   const AppMenuItem = (props: AppMenuItemProps) => {
@@ -151,16 +152,16 @@ const AppProtected = () => {
 
   const AppMenu = () => {
     return (
-      <Paper sx={{ width: '20rem', maxWidth: '100%' }}>
-        <List>
-          <AppMenuItem to="/dashboard" label="Dashboard" icon={<DashboardOutlined />} />
+      <Paper sx={{ width: '20rem', maxWidth: '100%'}}>
+        <List> 
+          <AppMenuItem to="/dashboard" label="Dashboard"  icon={<DashboardOutlined sx={{color: '#1976d2'}}/>} />
           <Divider />
-          <AppMenuItem to="/sectors" label="Setores" icon={<PrecisionManufacturing />} />
+          <AppMenuItem to="/sectors" label="Setores"  icon={<PrecisionManufacturing sx={{color: '#1976d2'}}/>} />
           <CustomizedAccordions />
-          <AppMenuItem to="/settings" label="Configurações" icon={<SettingsIcon />} />
+          <AppMenuItem to="/settings" label="Configurações"  icon={<SettingsIcon sx={{color: '#1976d2'}}/>} />
           <Divider />
-          <AppMenuItem to="/login" label="Login" icon={<Person />} />
-        </List>
+          <AppMenuItem to="/login" label="Login" icon={<Person sx={{color: '#1976d2'}}/>} />
+       </List>
       </Paper>
     )
   }
@@ -190,7 +191,7 @@ const AppProtected = () => {
       </EosAppBar>
       <EosDrawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton onClick={handleDrawerClose} >
             {theme.direction === 'rtl' ? <ChevronRight /> : <ChevronLeft />}
           </IconButton>
         </DrawerHeader>

@@ -8,7 +8,7 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { Divider} from '@mui/material';
+import { Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { PieChartOutline } from '@mui/icons-material'
 import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
@@ -30,7 +30,7 @@ const Accordion = styled((props: AccordionProps) => (
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
     <MuiAccordionSummary
-        expandIcon={< DeviceThermostatIcon sx={{ fontSize: '1.5rem' }} />}
+        expandIcon={<  PieChartOutline sx={{ fontSize: '1.5rem', color: '#1976d2' }} />}
         {...props}
     />
 ))(({ theme }) => ({
@@ -48,7 +48,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 }));
 const AccordionSummary2 = styled((props: AccordionSummaryProps) => (
     <MuiAccordionSummary
-        expandIcon={< PieChartOutline sx={{ fontSize: '1.5rem' }} />}
+        expandIcon={<DeviceThermostatIcon sx={{ fontSize: '1.5rem', color: '#1976d2' }} />}
         {...props}
     />
 ))(({ theme }) => ({
@@ -85,29 +85,71 @@ export default function CustomizedAccordions() {
         };
 
     return (
+
+
+        /* ul {
+         list - style: none;
+         margin: 0;
+         padding: 0;
+ 
+         
+ 
+             li {
+             display: flex;
+             align - items: center;
+             padding: 5px;
+             cursor: pointer;
+ 
+                 &:hover {
+                 background - color: #ece8ff;
+             }
+ 
+ 
+                 span {
+                 font - size: 13px;
+                 font - weight: 600;
+                 color: #888;
+                 margin - left: 10px;
+             }
+         }*/
         <Box sx={{ display: 'flex' }}>
 
             <div>
 
-                <Accordion onChange={handleChange('panel1')}  sx={{width: '13rem', backgroundColor: '#FFFFFF', padding: '0%'}}>
-                    <AccordionSummary2 aria-controls="panel1d-content" id="panel1d-header" sx={{backgroundColor: '#FFFFFF'}} >
+                <Accordion onChange={handleChange('panel1')} sx={{ width: '13rem', backgroundColor: '#FFFFFF', padding: '0%' }}>
+                    <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" sx={{ backgroundColor: '#FFFFFF' }} >
 
-                        <Typography sx={{mx: '1.5rem'}}>Máquinas</Typography>
+                        <Typography sx={{
+                            mx: '1.5rem',
+                            fontSize: '1rem',
+                            color: '#000000',
+                        }}
+                        >Máquinas</Typography>
 
-                    </AccordionSummary2>
+                    </AccordionSummary>
                     <Collapse in={expanded === 'panel1'} timeout="auto" unmountOnExit>
                         <AccordionDetails>
 
-                            <Typography sx={{ml: '3rem'}}>
-                                <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
-                                Tempo Real
+                            <Typography sx={{
+                              
+                                mx: '1.5rem',
+                                fontSize: '1rem',
+                              
+                            }}>
+                                <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', color: '#000000'}}>
+                                    Tempo Real
                                 </Link>
                             </Typography>
                         </AccordionDetails>
-                        
+
                         <AccordionDetails>
 
-                            <Typography sx={{ml: '3rem'}}>
+                            <Typography sx={{ 
+                      
+                            mx: '1.5rem', 
+                            fontSize: '1rem',
+                            
+                             }}>
                                 <Link to='/resourceHistoricalAnalysis' style={{ 'textDecoration': "none", 'color': '#000000' }}
                                 >Hsitóricos
                                 </Link>
@@ -115,15 +157,22 @@ export default function CustomizedAccordions() {
                         </AccordionDetails>
                     </Collapse>
                 </Accordion>
-                <Accordion onChange={handleChange('panel2')} sx={{width: '13rem'} } >
-                    <AccordionSummary aria-controls="panel2d-content" id="panel1d-header" sx={{backgroundColor: '#FFFFFF'}} >
-                
-                    
-                        <Typography sx={{mx: '1.5rem'}}>Fornos</Typography>
-                    </AccordionSummary>
+                <Accordion onChange={handleChange('panel2')} sx={{ width: '13rem' }} >
+                    <AccordionSummary2 aria-controls="panel2d-content" id="panel1d-header" sx={{ backgroundColor: '#FFFFFF' }} >
+
+
+                        <Typography sx={{
+                            mx: '1.5rem',
+                            fontSize: '1rem',
+                             }}>Fornos</Typography>
+                    </AccordionSummary2>
                     <AccordionDetails>
 
-                        <Typography sx={{ml: '3rem'}}>
+                        <Typography sx={{ 
+                          
+                            mx: '1.5rem', 
+                            fontSize: '1rem',
+                             }}>
                             <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
                                 Tempo Real
                             </Link>
@@ -136,8 +185,12 @@ export default function CustomizedAccordions() {
                     <Collapse in={expanded === 'panel2'} timeout="auto" unmountOnExit >
                         <AccordionDetails>
 
-                            <Typography sx={{ml: '3rem'}}>
-                                <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
+                            <Typography sx={{ 
+                               
+                                mx: '1.5rem', 
+                                fontSize: '1rem',
+                                 }}>
+                                <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000'}}>
                                     Históricos
                                 </Link>
 
@@ -146,7 +199,10 @@ export default function CustomizedAccordions() {
                         </AccordionDetails>
                         <Divider />
                         <AccordionDetails>
-                            <Typography sx={{ml: '3rem'}}>
+                            <Typography sx={{ 
+                            mx: '1.5rem', 
+                            fontSize: '1rem',
+                            }}>
                                 <Link to='/resourceHistoricalAnalysis' style={{ 'textDecoration': "none", 'color': '#000000' }}>
                                     Alarmes
                                 </Link>
@@ -155,7 +211,10 @@ export default function CustomizedAccordions() {
                         </AccordionDetails>
                         <Divider />
                         <AccordionDetails>
-                            <Typography sx={{ml: '3rem'}}>
+                            <Typography sx={{ 
+                                mx: '1.5rem', 
+                                fontSize: '1rem',
+                             }}>
                                 <Link to='/resourceHistoricalAnalysis' style={{ 'textDecoration': "none", 'color': '#000000' }}>
                                     Limites Temp
                                 </Link>
