@@ -4,8 +4,6 @@ import LinearProgress, { LinearProgressProps } from '@mui/material/LinearProgres
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 
 
 function DataProgressBar(props: LinearProgressProps & { value: number }) {
@@ -24,7 +22,6 @@ function DataProgressBar(props: LinearProgressProps & { value: number }) {
   );
 }
 
-
 export default function ProgressBar() {
   const [progress, setProgress] = React.useState(10);
 
@@ -38,17 +35,17 @@ export default function ProgressBar() {
   }, []);
 
   return (
-
     <Box
+
       sx={{
         display: 'flex',
         flexWrap: 'wrap',   
+      
         '& > :not(style)': {
           m: 1,
           width: '10rem',
-          height: '100%',
+          height: '4.5rem',
           position: "relative",
-          top: '2rem',
           border: "solid",
           borderColor: "#DCDCDC",
           borderRadius: '1rem',

@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Title from '../../GeneralComponents/Title';
 import Card from '../../StatisticsComponents/ResourceCard';
-import Selector from '../../GeneralComponents/Selector';
+import Selector from '../../GeneralComponents/SectorSelector';
 import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';

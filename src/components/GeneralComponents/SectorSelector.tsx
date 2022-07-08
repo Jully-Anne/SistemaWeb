@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
-export default function Selector() {
+export default function SectorSelector() {
   const [sector, setSector] = React.useState('');
 
   const handleChangeSector = (event: SelectChangeEvent) => {

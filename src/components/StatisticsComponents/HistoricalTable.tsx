@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import Brightness1Icon from '@mui/icons-material/Brightness1';
 
 interface Column {
   id: 'date' | 'time' | 'partsPerMinute' | 'totalProduction' | 'status';
@@ -47,7 +48,7 @@ interface Data {
   time: string;
   partsPerMinute: number;
   totalProduction: number;
-  status: string;
+  status: any;
 }
 
 function createData(
@@ -55,28 +56,27 @@ function createData(
   time: string,
   partsPerMinute: number,
   totalProduction: number,
-  status: string,
+  status: any,
 ): Data {
-
   return { date, time, partsPerMinute, totalProduction, status };
 }
 
 const rows = [
-  createData('06-07-2022', '08:00:00', 54, 7263, 'Produzindo'),
-  createData('06-07-2022', '09:00:00', 50, 7313, 'Produzindo'),
-  createData('06-07-2022', '10:00:00', 0, 7313, 'Parada'),
-  createData('06-07-2022', '11:00:00', 0, 7313, 'Parada'),
-  createData('06-07-2022', '12:00:00', 0, 0, 'Sem Dados'),
-  createData('06-07-2022', '13:00:00', 0, 7313, 'Sem Programação'),
-  createData('06-07-2022', '14:00:00', 0, 7313, 'Parada'),
-  createData('06-07-2022', '15:00:00', 50, 7363, 'Produzindo'),
-  createData('06-07-2022', '16:00:00', 54, 7417, 'Produzindo'),
-  createData('06-07-2022', '17:00:00', 0, 7417, 'Parada'),
-  createData('06-07-2022', '18:00:00', 0, 0, 'Sem Dados'),
-  createData('06-07-2022', '19:00:00', 0, 0, 'Sem Dados'),
-  createData('06-07-2022', '20:00:00', 0, 0, 'Sem Programação'),
-  createData('06-07-2022', '21:00:00', 0, 0, 'Sem Programação'),
-  createData('06-07-2022', '22:00:00', 0, 0, 'Sem Programação'),
+  createData('06-07-2022', '08:00:00', 54, 7263, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '09:00:00', 50, 7313, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '10:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '11:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '12:00:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
+  createData('06-07-2022', '13:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '14:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '15:00:00', 50, 7363, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '16:00:00', 54, 7417, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '17:00:00', 0, 7417, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '18:00:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
+  createData('06-07-2022', '19:00:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
+  createData('06-07-2022', '20:00:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '21:00:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '22:00:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
  
 ];
 

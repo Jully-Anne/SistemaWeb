@@ -11,7 +11,6 @@ import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
 import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
 import Dashboard from './Pages/Dashboard/index'
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
-import { fontWeight } from '@mui/system';
 
 const drawerWidth = 200
 
@@ -167,7 +166,7 @@ const AppProtected = () => {
   }
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', backgroundColor: '#F8F9FA' }}>
       <CssBaseline />
       <EosAppBar position="fixed" open={open}>
         <Toolbar>

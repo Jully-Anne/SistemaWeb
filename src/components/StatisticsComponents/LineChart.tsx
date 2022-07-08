@@ -1,3 +1,4 @@
+import { Box } from "@mui/system";
 import { Chart } from "react-google-charts";
 
 export const data = [
@@ -18,11 +19,12 @@ export const options = {
 
 };
 export const style = {
-  maxWidth: '100%',
+  maxWidth: '100%'
 }
 
 export function LineChart() {
   return (
+  
     <Chart
       chartType="LineChart"
       width="100%"
@@ -33,5 +35,6 @@ export function LineChart() {
     
      
     />
+  
   );
 }

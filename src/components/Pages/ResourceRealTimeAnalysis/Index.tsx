@@ -14,17 +14,7 @@ import { PieChart } from '../../StatisticsComponents/PieChart';
 
 
 
-const mdTheme = createTheme({
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 900,
-        lg: 1200,
-        xl: 1536,
-      },
-    },
-  });
+const mdTheme = createTheme({});
 function ResourceRealTimeAnalysis() {
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
@@ -62,20 +52,40 @@ function ResourceRealTimeAnalysis() {
                                 alignItems: 'center'
                             }}
                         >   <Selectors />
-                          <QueryButton />
+                            <QueryButton />
                         </Grid>
                     </Grid>
                 </Grid>
 
             </Container>
             <Divider sx={{ position: 'relative', top: '1.5rem', left: '0.02rem' }} />
-            <DataProgressBar />
+            <Grid item xs={6} md={8} lg={10}>
+                <Grid
+                    sx={{
+                        mt: 1,
+                        p: 3,
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        flexDirection: 'column',
+                        height: '15rem',
+                        maxWidth: "68rem",
+                        textAlign: 'center'
+
+                    }}
+                >
+
+                    <DataProgressBar />
+                </Grid>
+
+
+
+            </Grid>
             <Divider sx={{ position: 'relative', top: '2.5rem', left: '0.02rem' }} />
 
             <Container maxWidth="lg" sx={{ mt: 4, mb: 1, ml: -2, mr: 5 }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} >
                     {/* LineChart */}
-                    <Grid item xs={9} md={9} lg={9}>
+                    <Grid item xs={6} md={8} lg={10} sx={{ position: 'relative' }}>
                         <Paper elevation={2}
                             sx={{
                                 mt: 3,
@@ -85,33 +95,33 @@ function ResourceRealTimeAnalysis() {
                                 flexDirection: 'column',
                                 height: '25rem',
                                 width: "100%",
+                                border: "solid",
+                                borderColor: "#DCDCDC",
                                 borderRadius: '1rem',
                                 textAlign: 'center'
                             }}
                         >
                             <LineChart />
                         </Paper>
-                    </Grid>
-
-                    {/* PieChart */}
-                    <Grid item xs={3} md={5} lg={5}>
                         <Paper elevation={2}
                             sx={{
                                 mt: 3,
-                                ml: 2,
                                 p: 1,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                width: '100%',
-                                minHeight: "15rem",
+                                width: '16rem',
+                                border: 'solid',
+                                borderColor: '#DCDCDC',
                                 borderRadius: "1rem",
                             }}
                         >
                             <PieChart />
                         </Paper>
                     </Grid>
+
+
                 </Grid>
-               
+
             </Container>
 
         </ThemeProvider >
