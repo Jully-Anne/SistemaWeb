@@ -1,4 +1,3 @@
-import { Box } from "@mui/system";
 import { Chart } from "react-google-charts";
 
 export const data = [
@@ -14,6 +13,7 @@ export const options = {
   fontSize: "15",
   titleColor: "#1976D2",
   curveType: "function",
+  backgroundColor: '#F8F9FA',
   legend: { position: "bottom" },
   chartArea: { width: "85%", height: "70%"},
 
@@ -27,14 +27,11 @@ export function LineChart() {
   
     <Chart
       chartType="LineChart"
-      width="100%"
+      width="98%"
       height="20rem"
       data={data}
       options={options}
       style = {style}
-    
-     
     />
-  
   );
 }

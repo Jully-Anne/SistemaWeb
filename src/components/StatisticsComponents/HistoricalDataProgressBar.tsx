@@ -1,4 +1,4 @@
-//Data Progress Bar - Componente com caixa de informações sobre a máquina para a tela Consultas Tempo Real
+//Data Progress Bar - Componente com caixa de informações sobre a máquina para tela de Consultas históricas
 import * as React from 'react';
 import LinearProgress, { LinearProgressProps } from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 
 
-function DataProgressBar(props: LinearProgressProps & { value: number }) {
+function HistoricalDataProgressBar(props: LinearProgressProps & { value: number }) {
   return (
   
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -58,41 +58,11 @@ export default function ProgressBar() {
     >
       <React.Fragment>
         <Paper elevation={2}>
-          <Typography color="primary" >
-            O.P.
-          </Typography>
-          <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-            12548/1
-          </Typography>
-        </Paper>
-      </React.Fragment>
-      <React.Fragment>
-        <Paper elevation={2}>
-          <Typography color="primary" sx={{ flex: 1 }}>
-            LOTE
-          </Typography>
-          <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-            65234
-          </Typography>
-        </Paper>
-
-        <Paper elevation={2}>
-          <Typography color="primary" sx={{ flex: 1 }}>
-            MODELO
-          </Typography>
-
-          <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-            3941
-          </Typography>
-        </Paper>
-      </React.Fragment>
-      <React.Fragment>
-        <Paper elevation={2}>
           <Typography color="primary" sx={{ flex: 1 }}>
             DISPONIBILIDADE
           </Typography>
 
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <HistoricalDataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
       <React.Fragment>
@@ -100,28 +70,7 @@ export default function ProgressBar() {
           <Typography color="primary" sx={{ flex: 1 }}>
             EFICIÊNCIA
           </Typography>
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
-        </Paper>
-      </React.Fragment>
-      <React.Fragment>
-        <Paper elevation={2}>
-          <Typography color="primary" sx={{ flex: 1 }}>
-            TEMPO DE CICLO
-          </Typography>
-          <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-            5.1s
-          </Typography>
-        </Paper>
-      </React.Fragment>
-      <React.Fragment>
-        <Paper elevation={2}>
-          <Typography color="primary" sx={{ flex: 1 }}>
-            PRODUTIVIDADE
-          </Typography>
-          <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-            45/50 pçs./min.
-          </Typography>
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <HistoricalDataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
       <React.Fragment>
@@ -132,7 +81,7 @@ export default function ProgressBar() {
           <Typography color="#1C1C1C" sx={{ flex: 1 }}>
             10249/20000 pçs.
           </Typography>
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <HistoricalDataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
     </Box >

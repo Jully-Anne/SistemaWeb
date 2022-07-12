@@ -18,7 +18,7 @@ export default function SelectorData() {
         sx={{
           display: 'flex',
           width: '14rem',
-          mx:'1rem'
+          mx:'1.5rem'
 
         }}>
         <Grid item xs={20} md={20} lg={20}>
@@ -26,6 +26,7 @@ export default function SelectorData() {
             {/* Options */}
             <Grid
               sx={{
+                mt: '1.5rem',
                 my: '1rem',
                 display: 'flex',
                 flexWrap: 'wrap',

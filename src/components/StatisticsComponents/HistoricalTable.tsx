@@ -12,33 +12,33 @@ import Brightness1Icon from '@mui/icons-material/Brightness1';
 interface Column {
   id: 'date' | 'time' | 'partsPerMinute' | 'totalProduction' | 'status';
   label: string;
-  minWidth?: number;
-  align?: 'right';
+  maxWidth?: string;
+  align?: 'center';
   format?: (value: number) => string;
 }
 
 const columns: Column[] = [
-  { id: 'date', label: 'Data', minWidth: 170 },
-  { id: 'time', label: 'Hora', minWidth: 100 },
+  { id: 'date', label: 'Data', maxWidth: '8rem' },
+  { id: 'time', label: 'Hora', maxWidth: '6rem' },
   {
     id: 'partsPerMinute',
     label: 'Peças por Minuto',
-    minWidth: 170,
-    align: 'right',
+    maxWidth: '5rem',
+    align: 'center',
     format: (value: number) => value.toLocaleString('pt-BR'),
   },
   {
     id: 'totalProduction',
     label: 'Produção Total',
-    minWidth: 170,
-    align: 'right',
+    maxWidth: '5rem',
+    align: 'center',
     format: (value: number) => value.toLocaleString('pt-BR'),
   },
   {
     id: 'status',
     label: 'Status',
-    minWidth: 170,
-    align: 'right',
+    maxWidth: '5rem',
+    align: 'center',
     format: (value: number) => value.toFixed(2),
   },
 ];
@@ -62,25 +62,25 @@ function createData(
 }
 
 const rows = [
-  createData('06-07-2022', '08:00:00', 54, 7263, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '09:00:00', 50, 7313, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '10:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '11:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '12:00:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
-  createData('06-07-2022', '13:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#808080" }}/>),
-  createData('06-07-2022', '14:00:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '15:00:00', 50, 7363, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '16:00:00', 54, 7417, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '17:00:00', 0, 7417, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '18:00:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
-  createData('06-07-2022', '19:00:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
-  createData('06-07-2022', '20:00:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
-  createData('06-07-2022', '21:00:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
-  createData('06-07-2022', '22:00:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '08:00', 54, 7263, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '09:00', 50, 7313, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '10:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '11:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '12:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
+  createData('06-07-2022', '13:00', 0, 7313, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '14:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '15:00', 50, 7363, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '16:00', 54, 7417, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
+  createData('06-07-2022', '17:00', 0, 7417, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
+  createData('06-07-2022', '18:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
+  createData('06-07-2022', '19:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
+  createData('06-07-2022', '20:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '21:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '22:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
  
 ];
 
-export default function ColumnGroupingTable() {
+export default function HistoricalTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -94,8 +94,8 @@ export default function ColumnGroupingTable() {
   };
 
   return (
-    <Paper sx={{ maxWidth: '50rem', borderRadius: '1rem', mx: '0.5rem'}}>
-      <TableContainer sx={{ maxHeight: 440 }}>
+    <Paper sx={{ maxWidth: '40rem', borderRadius: '1rem', mx: '0.5rem'}}>
+      <TableContainer sx={{ maxHeight: '25rem', backgroundColor: '#F8F9FA'}}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
@@ -109,7 +109,7 @@ export default function ColumnGroupingTable() {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ top: 57, minWidth: column.minWidth }}
+                  style={{ top: 57, minWidth: column.maxWidth }}
                 >
                   {column.label}
                 </TableCell>

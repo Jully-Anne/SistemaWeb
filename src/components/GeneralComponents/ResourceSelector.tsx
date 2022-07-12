@@ -14,7 +14,7 @@ export default function ResourceSelector() {
  
   return (
     <div>
-      <FormControl sx={{ m: '0.5rem', minWidth: 120 }}>
+      <FormControl sx={{ m: '0.5rem', mt: '0rem', minWidth: '8rem' }}>
         <InputLabel id="demo-simple-select-helper-label">Máquina</InputLabel>
         <Select
           labelId="demo-simple-select-helper-label"

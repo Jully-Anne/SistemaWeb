@@ -13,6 +13,7 @@ export const options = {
   pieHole: 0.4,
   fontSize: "15",
   titleColor: "#1976D2",
+  backgroundColor: '#F8F9FA',
   colors: ["#1AC640", "#FF0000", "#808080", "#1C1C1C"],
   legend: { position: "bottom" },
   chartArea: { width: "80%", height: "80%"}

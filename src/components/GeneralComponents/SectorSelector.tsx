@@ -14,7 +14,7 @@ export default function SectorSelector() {
  
   return (
     <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      <FormControl sx={{ m: '0.5rem', mt: '0rem', minWidth: '8rem' }}>
         <InputLabel id="demo-simple-select-helper-label">Setor</InputLabel>
         <Select
           labelId="demo-simple-select-helper-label"

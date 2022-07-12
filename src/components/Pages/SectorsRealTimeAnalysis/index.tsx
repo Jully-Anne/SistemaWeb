@@ -32,11 +32,11 @@ function Sectors() {
                     Setores
                 </Typography>
             </Title>
-            <Divider />
+            <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
             <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
                 <Grid container>
 
-                    <Grid item xs={12} md={10} lg={9}>
+                    <Grid item xs={1} md={7} lg={10}>
                         <Grid
                             sx={{
                                 mt: 3,
@@ -44,18 +44,19 @@ function Sectors() {
                                 display: 'flex',
                                 flexDirection: 'row',
                                 height: '2rem',
-                                width: "60rem",
+                                minWidth: '10rem',
+                                maxWidth: "70rem",
                                 alignItems: 'center'
                             }}
                         >
                             <Selector />
                             <QueryButton />
                         </Grid>
+
                     </Grid>
+
                 </Grid>
-
             </Container>
-
             <Divider sx={{ position: "relative", top: '1.5rem', left: '0.02rem' }} />
             <Card />
         </ThemeProvider>
