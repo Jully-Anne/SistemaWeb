@@ -8,9 +8,11 @@ import Sectors from './Pages/SectorsRealTimeAnalysis'
 import Profile from './Profile'
 import Settings from './Pages/Settings/index'
 import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
+import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis'
 import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
 import Dashboard from './Pages/Dashboard/index'
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
+
 
 const drawerWidth = 200
 
@@ -206,7 +208,7 @@ const AppProtected = () => {
           <Route path="/sectors" element={<Sectors />} />
           <Route path='/resourceRealTimeAnalysis' element={<ResourceRealTimeAnalysis />} />
           <Route path='/resourceHistoricalAnalysis' element={<ResourceHistoricalAnalysis />} />
-          <Route path='/furnaceRealTimeAnalysis' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/furnaceRealTimeAnalysis' element={<FurnaceRealTimeAnalysis />} />
           <Route path='/furnaceHistoricalAnalysis' element={<ResourceRealTimeAnalysis />} />
           <Route path='/furnaceHistoricalAlarmsAnalysis' element={<ResourceRealTimeAnalysis />} />
           <Route path='/furnaceTemperatureLimits' element={<ResourceRealTimeAnalysis />} />

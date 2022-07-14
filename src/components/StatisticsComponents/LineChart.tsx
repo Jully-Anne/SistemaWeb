@@ -16,6 +16,7 @@ export const options = {
   backgroundColor: '#F8F9FA',
   legend: { position: "bottom" },
   chartArea: { width: "85%", height: "70%"},
+  colors: ['#10215F', '#0060FF', '#1AC640'],
 
 };
 export const style = {

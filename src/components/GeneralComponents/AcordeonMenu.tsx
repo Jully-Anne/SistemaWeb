@@ -12,6 +12,7 @@ import { Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { PieChartOutline } from '@mui/icons-material'
 import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import { Box } from '@mui/system';
 import { Collapse } from '@mui/material';
 
@@ -30,7 +31,7 @@ const Accordion = styled((props: AccordionProps) => (
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
     <MuiAccordionSummary
-        expandIcon={<  PieChartOutline sx={{ fontSize: '1.5rem', color: '#1976d2' }} />}
+        expandIcon={< LeaderboardIcon  sx={{ fontSize: '1.5rem', color: '#1976d2' }} />}
         {...props}
     />
 ))(({ theme }) => ({
@@ -86,32 +87,6 @@ export default function CustomizedAccordions() {
 
     return (
 
-
-        /* ul {
-         list - style: none;
-         margin: 0;
-         padding: 0;
- 
-         
- 
-             li {
-             display: flex;
-             align - items: center;
-             padding: 5px;
-             cursor: pointer;
- 
-                 &:hover {
-                 background - color: #ece8ff;
-             }
- 
- 
-                 span {
-                 font - size: 13px;
-                 font - weight: 600;
-                 color: #888;
-                 margin - left: 10px;
-             }
-         }*/
         <Box sx={{ display: 'flex' }}>
 
             <div>
@@ -173,7 +148,7 @@ export default function CustomizedAccordions() {
                             mx: '1.5rem', 
                             fontSize: '1rem',
                              }}>
-                            <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
+                            <Link to='/furnaceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
                                 Tempo Real
                             </Link>
 

@@ -93,13 +93,39 @@ function ResourceHistoricalAnalysis() {
                         >
                             Consulta Históricos
                         </Typography>
-                        <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem' }} />
+                        <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem', width: '100%', maxWidth: '100%' }} />
                     </Title>
 
 
-                    <Container maxWidth="lg" sx={{ mt: '1.5rem', mb: '0rem' }}>
+                    <Container maxWidth="lg" sx={{ mt: '1.5rem' }}>
                         <Grid container spacing={3} >
                             {/* Options */}
+                            <Grid item xs={6} md={8} lg={20} >
+                                <Grid
+                                    sx={{
+
+                                        p: 1,
+                                        display: 'flex',
+                                        flexWrap: 'wrap',
+                                        position: 'relative',
+                                        flexDirection: 'row',
+                                        minHeight: '2rem',
+                                        maxHeight: '22rem',
+                                        minWidth: '17rem',
+                                        maxWidth: "65rem",
+                                        alignItems: 'center'
+                                    }}
+                                >
+                                    <SectorSelector />
+                                    <ResourceSelector />
+                                    <InitialDateSelector />
+                                    <FinalDateSelector />
+                                    <TimeSelector />
+                                 
+                                </Grid>
+                      
+                            {/* Options */}
+                            <Grid container spacing={1} >
                             <Grid item xs={6} md={8} lg={20} >
                                 <Grid
                                     sx={{
@@ -116,35 +142,15 @@ function ResourceHistoricalAnalysis() {
                                         alignItems: 'center'
                                     }}
                                 >
-                                    <SectorSelector />
-                                    <ResourceSelector />
-                                    <InitialDateSelector />
-                                    <FinalDateSelector />
-                                    <TimeSelector />
-                                    <QueryButton />
-                                </Grid>
-                                <Grid item xs={7} md={8} lg={20} >
-                                    <Grid
-                                        sx={{
-
-                                            p: 1,
-                                            display: 'flex',
-                                            flexWrap: 'wrap',
-                                            position: 'relative',
-                                            flexDirection: 'row',
-                                            minHeight: '2rem',
-                                            maxHeight: '20rem',
-                                            minWidth: '17rem',
-                                            maxWidth: "70rem",
-                                            alignItems: 'center'
-                                        }}
-                                    > 
-                                   
+                                        <QueryButton />
                                         <PrintButton />
                                         <ExportExcelButton />
                                     </Grid>
-                                </Grid>
+                      
+                                
                                 <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem' }} />
+                            </Grid>
+                            </Grid>
                             </Grid>
 
                             {/* DataProgressBar */}
@@ -199,8 +205,8 @@ function ResourceHistoricalAnalysis() {
                                         flexWrap: 'wrap',
                                         flexDirection: 'row',
                                         minHeight: '20rem',
-                                        maxHeight: '30rem',
-                                        minWidth: '35rem',
+                                        maxHeight: '35rem',
+                                        minWidth: '22rem',
                                         maxWidth: "35rem",
                                         border: 'solid',
                                         borderColor: '#DCDCDC',

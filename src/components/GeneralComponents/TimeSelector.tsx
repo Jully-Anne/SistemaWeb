@@ -14,7 +14,7 @@ export default function TimeSelector() {
  
   return (
     <div>
-      <FormControl sx={{ mx: '0.5rem', minWidth: '8rem' }}>
+      <FormControl sx={{ m: '0.5rem', mb: '1rem', minWidth: '8rem' }}>
         <InputLabel id="demo-simple-select-helper-label">Tempo</InputLabel>
         <Select
           labelId="demo-simple-select-helper-label"

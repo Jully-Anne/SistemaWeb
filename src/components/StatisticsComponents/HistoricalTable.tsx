@@ -12,6 +12,7 @@ import Brightness1Icon from '@mui/icons-material/Brightness1';
 interface Column {
   id: 'date' | 'time' | 'partsPerMinute' | 'totalProduction' | 'status';
   label: string;
+  minWidth?: string;
   maxWidth?: string;
   align?: 'center';
   format?: (value: number) => string;
@@ -94,7 +95,7 @@ export default function HistoricalTable() {
   };
 
   return (
-    <Paper sx={{ maxWidth: '40rem', borderRadius: '1rem', mx: '0.5rem'}}>
+    <Paper sx={{minWidth: "15rem", maxWidth: '50rem', borderRadius: '1rem', mx: '0.5rem'}}>
       <TableContainer sx={{ maxHeight: '25rem', backgroundColor: '#F8F9FA'}}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
