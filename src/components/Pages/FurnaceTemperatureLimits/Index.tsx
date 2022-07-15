@@ -1,4 +1,4 @@
-//Furnace Real Time - Tela de consulta de temperaturas em tempo real e os últimos alarmes do forno que for selecionado pelo usuário
+//Furnace Historical Analysis - Tela de consulta e análise do histórico de temperaturas do forno escolhido e selecionado
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
@@ -6,14 +6,13 @@ import Typography from '@mui/material/Typography';
 import Title from '../../GeneralComponents/Title';
 import FurnaceRealTimeCard from '../../StatisticsComponents/FurnaceRealTimeCard';
 import FurnaceSelector from '../../GeneralComponents/FurnaceSelector';
-import FurnaceRealTimeAlarmsTable from '../../StatisticsComponents/FurnaceRealTimeAlarmsTable';
 import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
 
 const mdTheme = createTheme();
 
-function FurnaceRealTimeAnalysis() {
+function FurnaceTemperatureLimits() {
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
         setOpen(!open);
@@ -31,7 +30,7 @@ function FurnaceRealTimeAnalysis() {
                 noWrap
                 sx={{ flexGrow: 1 }}
             >
-             Fornos - Tempo Real
+             Fornos - Limites de Temperatura
             </Typography>
         </Title>
         <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
@@ -62,34 +61,12 @@ function FurnaceRealTimeAnalysis() {
         <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
 
             <FurnaceRealTimeCard />
-                            {/* FurnaceRealTimeAlarmsTable */}
-                            <Grid item xs={4} md={7} lg={7}>
-                                <Grid
-                                 sx={{
-                                    mx: '0.5rem',
-                                    mt: 0,
-                                    p: 1,
-                                    display: 'flex',
-                                    flexWrap: 'wrap',
-                                    flexDirection: 'row',
-                                    minHeight: '10rem',
-                                    maxHeight: '35rem',
-                                    minWidth: '5rem',
-                                    maxWidth: "35rem",
-                                    border: 'solid',
-                                    borderColor: '#DCDCDC',
-                                    borderRadius: '1rem'
-                                }}
-                                >
-                                      <FurnaceRealTimeAlarmsTable />
-                                </Grid>
-                               
-                            </Grid>
+                
                            
        
         </ThemeProvider>
     );
 }
 export default function Index() {
-    return <FurnaceRealTimeAnalysis />;
+    return <FurnaceTemperatureLimits />;
 }

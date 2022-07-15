@@ -9,11 +9,11 @@ import Profile from './Profile'
 import Settings from './Pages/Settings/index'
 import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
 import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis/Index'
+import FurnaceTemperatureLimits from './Pages/FurnaceTemperatureLimits/Index'
 import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
 import Dashboard from './Pages/Dashboard/index'
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
-import { Grid } from 'react-virtualized';
-import { Container } from '@mui/system';
+
 
 
 const drawerWidth = 200
@@ -214,7 +214,7 @@ const AppProtected = () => {
           <Route path='/furnaceRealTimeAnalysis' element={<FurnaceRealTimeAnalysis />} />
           <Route path='/furnaceHistoricalAnalysis' element={<ResourceRealTimeAnalysis />} />
           <Route path='/furnaceHistoricalAlarmsAnalysis' element={<ResourceRealTimeAnalysis />} />
-          <Route path='/furnaceTemperatureLimits' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/furnaceTemperatureLimits' element={<FurnaceTemperatureLimits />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/login" element={<Profile />} />
 
