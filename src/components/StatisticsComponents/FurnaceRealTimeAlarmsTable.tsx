@@ -7,10 +7,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import Brightness1Icon from '@mui/icons-material/Brightness1';
 
 interface Column {
-  id: 'date' | 'time' | 'partsPerMinute' | 'totalProduction' | 'status';
+  id: 'date' | 'time' | 'alarms';
   label: string;
   minWidth?: string;
   maxWidth?: string;
@@ -22,66 +21,44 @@ const columns: Column[] = [
   { id: 'date', label: 'Data', maxWidth: '8rem' },
   { id: 'time', label: 'Hora', maxWidth: '6rem' },
   {
-    id: 'partsPerMinute',
-    label: 'Peças por Minuto',
+    id: 'alarms',
+    label: 'Alarmes',
     maxWidth: '5rem',
     align: 'center',
     format: (value: number) => value.toLocaleString('pt-BR'),
   },
-  {
-    id: 'totalProduction',
-    label: 'Produção Total',
-    maxWidth: '5rem',
-    align: 'center',
-    format: (value: number) => value.toLocaleString('pt-BR'),
-  },
-  {
-    id: 'status',
-    label: 'Status',
-    maxWidth: '5rem',
-    align: 'center',
-    format: (value: number) => value.toFixed(2),
-  },
+
 ];
 
 interface Data {
   date: string;
   time: string;
-  partsPerMinute: number;
-  totalProduction: number;
-  status: any;
+  alarms: string;
 }
 
 function createData(
   date: string,
   time: string,
-  partsPerMinute: number,
-  totalProduction: number,
-  status: any,
+  alarms: string,
+
 ): Data {
-  return { date, time, partsPerMinute, totalProduction, status };
+  return { date, time, alarms };
 }
 
 const rows = [
-  createData('06-07-2022', '08:00', 54, 7263, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '09:00', 50, 7313, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '10:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '11:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '12:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
-  createData('06-07-2022', '13:00', 0, 7313, <Brightness1Icon sx={{ color: "#808080" }}/>),
-  createData('06-07-2022', '14:00', 0, 7313, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '15:00', 50, 7363, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '16:00', 54, 7417, <Brightness1Icon sx={{ color: "#1AC640" }}/>),
-  createData('06-07-2022', '17:00', 0, 7417, <Brightness1Icon sx={{ color: "#FF0000" }}/>),
-  createData('06-07-2022', '18:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
-  createData('06-07-2022', '19:00', 0, 0, <Brightness1Icon sx={{ color: "#1C1C1C" }}/>),
-  createData('06-07-2022', '20:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
-  createData('06-07-2022', '21:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
-  createData('06-07-2022', '22:00', 0, 0, <Brightness1Icon sx={{ color: "#808080" }}/>),
+  createData('06-07-2022', '08:00', 'Falha de Comunicação Pré-Zona 1'),
+  createData('06-07-2022', '09:00', 'Comunicação Reestabelecida Pré-Zona 1'),
+  createData('06-07-2022', '10:00', 'Temperatura Baixa Zona 4'),
+  createData('06-07-2022', '11:00', 'Temperatura Alta Zona 3'),
+  createData('06-07-2022', '12:00', 'Temperatura Normalizada Zona 3'),
+  createData('06-07-2022', '13:00', 'Falha de Comunicação Incinerador'),
+  createData('06-07-2022', '14:00', 'Temperatura Normalizada Zona 4'),
+  createData('06-07-2022', '15:00', 'Comunicação Reestabelecida Incinerador'),
+  createData('06-07-2022', '16:00', 'Temperatura Alta Zona 1'),
  
 ];
 
-export default function HistoricalTable() {
+export default function FurnaceRealTimeAlarmsTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -95,13 +72,13 @@ export default function HistoricalTable() {
   };
 
   return (
-    <Paper sx={{minWidth: "15rem", maxWidth: '50rem', borderRadius: '1rem', mx: '0.5rem'}}>
+    <Paper sx={{ maxWidth: '50rem', borderRadius: '1rem', mx: '0rem'}}>
       <TableContainer sx={{ maxHeight: '25rem', backgroundColor: '#F8F9FA'}}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
               <TableCell align="center" colSpan={5}  sx={{color: '#1976d2', fontSize: '1.2rem'}} >
-                Históricos 
+                Alarmes
               </TableCell>
               
             </TableRow>

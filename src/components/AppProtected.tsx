@@ -8,10 +8,12 @@ import Sectors from './Pages/SectorsRealTimeAnalysis'
 import Profile from './Profile'
 import Settings from './Pages/Settings/index'
 import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
-import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis'
+import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis/Index'
 import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
 import Dashboard from './Pages/Dashboard/index'
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
+import { Grid } from 'react-virtualized';
+import { Container } from '@mui/system';
 
 
 const drawerWidth = 200
@@ -155,19 +157,20 @@ const AppProtected = () => {
     return (
       <Paper sx={{ width: '20rem', maxWidth: '100%'}}>
         <List> 
-          <AppMenuItem to="/dashboard" label="Dashboard"  icon={<DashboardOutlined sx={{color: '#1976d2'}}/>} />
+          <AppMenuItem to="/dashboard" label="Dashboard"  icon={<DashboardOutlined sx={{color: '#1976D2'}}/>} />
           <Divider />
-          <AppMenuItem to="/sectors" label="Setores"  icon={<PrecisionManufacturing sx={{color: '#1976d2'}}/>} />
+          <AppMenuItem to="/sectors" label="Setores"  icon={<PrecisionManufacturing sx={{color: '#1976D2'}}/>} />
           <CustomizedAccordions />
-          <AppMenuItem to="/settings" label="Configurações"  icon={<SettingsIcon sx={{color: '#1976d2'}}/>} />
+          <AppMenuItem to="/settings" label="Configurações"  icon={<SettingsIcon sx={{color: '#1976D2'}}/>} />
           <Divider />
-          <AppMenuItem to="/login" label="Login" icon={<Person sx={{color: '#1976d2'}}/>} />
+          <AppMenuItem to="/login" label="Login" icon={<Person sx={{color: '#1976D2'}}/>} />
        </List>
       </Paper>
     )
   }
 
   return (
+  <Box sx={{backgroundColor: '#000000'}}>
     <Box sx={{ display: 'flex', backgroundColor: '#F8F9FA' }}>
       <CssBaseline />
       <EosAppBar position="fixed" open={open}>
@@ -218,6 +221,7 @@ const AppProtected = () => {
         </Routes>
       </Box>
     </Box>
+  </Box>
   )
 }
 

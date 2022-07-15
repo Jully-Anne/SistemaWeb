@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Title from '../../GeneralComponents/Title';
 import FurnaceRealTimeCard from '../../StatisticsComponents/FurnaceRealTimeCard';
 import FurnaceSelector from '../../GeneralComponents/FurnaceSelector';
+import FurnaceRealTimeAlarmsTable from '../../StatisticsComponents/FurnaceRealTimeAlarmsTable';
 import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
@@ -19,45 +20,77 @@ function FurnaceRealTimeAnalysis() {
     };
 
     return (
+
+
         <ThemeProvider theme={mdTheme}>
-            <Title>
-                <Typography
-                    component="h1"
-                    variant="h6"
-                    color="inherit"
-                    noWrap
-                    sx={{ flexGrow: 1 }}
-                >
-                   Fornos - Tempo Real
-                </Typography>
-            </Title>
-            <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
-            <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
-                <Grid container>
+        <Title>
+            <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+                sx={{ flexGrow: 1 }}
+            >
+             Fornos - Tempo Real
+            </Typography>
+        </Title>
+        <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
+        <Container maxWidth="lg" sx={{ mt: 1, mb: 1, ml: -2, mr: 5 }}>
+            <Grid container>
 
-                    <Grid item xs={1} md={7} lg={10}>
-                        <Grid
-                            sx={{
-                                mt: 3,
-                                p: 1,
-                                display: 'flex',
-                                flexDirection: 'row',
-                                height: '2rem',
-                                minWidth: '10rem',
-                                maxWidth: "70rem",
-                                alignItems: 'center'
-                            }}
-                        >
-                            <FurnaceSelector />
+                <Grid item xs={1} md={7} lg={10}>
+                    <Grid
+                        sx={{
+                            mt: 3,
+                            p: 1,
+                            display: 'flex',
+                            flexDirection: 'row',
+                            height: '2rem',
+                            minWidth: '10rem',
+                            maxWidth: "70rem",
+                            alignItems: 'center'
+                        }}
+                    >
+                        <FurnaceSelector />
                             <QueryButton />
-                        </Grid>
-
                     </Grid>
 
                 </Grid>
-            </Container>
-            <Divider sx={{ position: "relative", bottom: '-0.5rem', left: '0.02rem' }} />
+
+            </Grid>
+        </Container>
+
+     
+        
+   
+        <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
+
             <FurnaceRealTimeCard />
+                            {/* FurnaceRealTimeAlarmsTable */}
+                            <Grid item xs={3} md={7} lg={7}>
+                                <Grid
+                                 sx={{
+                                     mx: '0.5rem',
+                                    mt: 0,
+                                    p: 1,
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    flexDirection: 'row',
+                                    minHeight: '10rem',
+                                    maxHeight: '35rem',
+                                    minWidth: '10rem',
+                                    maxWidth: "35rem",
+                                    border: 'solid',
+                                    borderColor: '#DCDCDC',
+                                    borderRadius: '1rem'
+                                }}
+                                >
+                                      <FurnaceRealTimeAlarmsTable />
+                                </Grid>
+                               
+                            </Grid>
+                           
+       
         </ThemeProvider>
     );
 }
