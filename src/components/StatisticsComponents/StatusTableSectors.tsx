@@ -85,7 +85,7 @@ export default function StatusTable() {
           width: "6rem",
           padding: '0.1rem',
           top: '0.1rem',
-          mb: 1,
+          mb: '0.5rem',
           backgroundColor: "#FFFFFF",//Fundo branco com hover desativado
           color: "#1C1C1C",//Letra preta com hover desativado
           '&:hover': {

@@ -5,6 +5,8 @@ import Title from '../GeneralComponents/Title';
 import { Box } from '@mui/system';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
+import InputField from './InputField'
+
 
 
 function preventDefault(event: React.MouseEvent) {
@@ -19,200 +21,176 @@ export default function SectorsCard() {
                 flexWrap: 'wrap',
                 '& > :not(style)': {
                     position: 'relative',
-                    m: 1,
+                    m: '1rem',
                     mt: '1rem',
                     width: '11rem',
-                    height: '9rem',
+                    height: '14rem',
                     border: "solid",
                     borderColor: "#DCDCDC",
                     borderRadius: '1rem',
-                    backgroundColor: "FFFAFA",
+                    backgroundColor: "#FFFAFA",
                     textAlign: "center"
                 },
             }}
         >
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Esteira</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        112
-                    </Typography>
+
                 </Paper>
             </React.Fragment>
+
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Incinerador</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
-                  
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
 
                 </Paper>
             </React.Fragment>
-
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Pré-Zona 1</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                       SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
 
                 </Paper>
             </React.Fragment>
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Pré-Zona 2</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1}}>
-                        SETPOINT
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1, border: 'solid'  }}>
-                        115
-                    </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                       REAL
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
 
                 </Paper>
             </React.Fragment>
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Zona 1</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
+
                 </Paper>
             </React.Fragment>
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Zona 2</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
 
                 </Paper>
             </React.Fragment>
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Zona 3</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                      REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
+
                 </Paper>
             </React.Fragment>
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Zona 4</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                      REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
 
                 </Paper>
             </React.Fragment>
             <React.Fragment>
                 <Paper elevation={2}>
+                    <Title>Zona 4</Title>
+                    <Divider sx={{ background: "#DCDCDC" }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
+                        MÍNIMO
+                    </Typography>
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
+                    </Typography>
 
+                </Paper>
+            </React.Fragment>
+            <React.Fragment>
+                <Paper elevation={2}>
                     <Title>Zona 5</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                       SETPOINT
+                        MÍNIMO
                     </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
-                    </Typography>
-                    <Divider sx={{ background: "#DCDCDC" }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        REAL
-                    </Typography>
-                    <Typography color="#1C1C1C" sx={{ flex: 1 }}>
-                        115
+                    <InputField />
+                    <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                        MÁXIMO
+                        <InputField />
                     </Typography>
 
                 </Paper>

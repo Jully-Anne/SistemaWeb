@@ -4,9 +4,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Title from '../../GeneralComponents/Title';
-import FurnaceRealTimeCard from '../../StatisticsComponents/FurnaceRealTimeCard';
+import FurnaceTemperatureLimitsCard from '../../StatisticsComponents/FurnaceTemperatureLimitsCard';
 import FurnaceSelector from '../../GeneralComponents/FurnaceSelector';
 import QueryButton from '../../GeneralComponents/QueryButton';
+import SaveButton from '../../GeneralComponents/SaveButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
 
@@ -60,8 +61,8 @@ function FurnaceTemperatureLimits() {
         </Container>
         <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
 
-            <FurnaceRealTimeCard />
-                
+            <FurnaceTemperatureLimitsCard />
+                <SaveButton />
                            
        
         </ThemeProvider>
