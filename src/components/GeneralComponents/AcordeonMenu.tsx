@@ -1,4 +1,4 @@
-//Menu acordeon, abre aba de opções de links quando clicado
+//Acordeon Menu -  abre aba de opções de links quando clicado no menu
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';

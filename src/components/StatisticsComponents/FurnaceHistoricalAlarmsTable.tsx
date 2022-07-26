@@ -1,3 +1,4 @@
+//Furnace Historical Alarms Table - Tabela de histórico de alarmes do forno selecionado
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';

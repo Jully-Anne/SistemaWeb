@@ -1,4 +1,4 @@
-//Query Button - Componente botão para gerar a busca e pesquisa dos dados solicitados
+//Print Button - Componente botão para gerar o print e a impressão a tela
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';

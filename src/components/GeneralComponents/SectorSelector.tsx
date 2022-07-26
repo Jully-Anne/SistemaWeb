@@ -1,4 +1,4 @@
-//Selectors - Componente com 1 seletor para a escolha e seleção de setor para a busca de informações 
+//Sector Selector - Componente com 1 seletor para a escolha e seleção de setor para a busca de informações 
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
