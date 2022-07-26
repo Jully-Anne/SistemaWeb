@@ -10,7 +10,6 @@ import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
 
-
 const mdTheme = createTheme();
 
 function Sectors() {

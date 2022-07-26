@@ -4,16 +4,17 @@ import { ChevronLeft, ChevronRight, DashboardOutlined, Menu, Person, PrecisionMa
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useAuth } from 'react-oidc-context'
 import { Route, Routes, useNavigate } from 'react-router-dom'
-import Sectors from './Pages/SectorsRealTimeAnalysis'
-import Profile from './Profile'
-import Settings from './Pages/Settings/index'
-import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
-import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis/Index'
-import FurnaceTemperatureLimits from './Pages/FurnaceTemperatureLimits/Index'
-import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
-import Dashboard from './Pages/Dashboard/index'
 import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
-
+import Dashboard from './Pages/Dashboard/index'
+import Sectors from './Pages/SectorsRealTimeAnalysis'
+import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
+import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
+import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis/Index'
+import FurnaceHistoricalAnalysis from './Pages/FurnaceHistoricalAnalysis/Index'
+import FurnaceHistoricalAlarms from './Pages/FurnaceHistoricalAlarms/Index'
+import FurnaceTemperatureLimits from './Pages/FurnaceTemperatureLimits/Index'
+import Settings from './Pages/Settings/index'
+import Profile from './Profile'
 
 
 const drawerWidth = 200
@@ -212,8 +213,8 @@ const AppProtected = () => {
           <Route path='/resourceRealTimeAnalysis' element={<ResourceRealTimeAnalysis />} />
           <Route path='/resourceHistoricalAnalysis' element={<ResourceHistoricalAnalysis />} />
           <Route path='/furnaceRealTimeAnalysis' element={<FurnaceRealTimeAnalysis />} />
-          <Route path='/furnaceHistoricalAnalysis' element={<ResourceRealTimeAnalysis />} />
-          <Route path='/furnaceHistoricalAlarmsAnalysis' element={<ResourceRealTimeAnalysis />} />
+          <Route path='/furnaceHistoricalAnalysis' element={<FurnaceHistoricalAnalysis />} />
+          <Route path='/furnaceHistoricalAlarms' element={<FurnaceHistoricalAlarms />} />
           <Route path='/furnaceTemperatureLimits' element={<FurnaceTemperatureLimits />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/login" element={<Profile />} />

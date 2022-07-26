@@ -163,7 +163,7 @@ export default function CustomizedAccordions() {
                                 mx: '1.5rem',
                                 fontSize: '1rem',
                             }}>
-                                <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
+                                <Link to='/furnaceHistoricalAnalysis' style={{ 'textDecoration': 'none', 'color': '#000000' }}>
                                     Históricos
                                 </Link>
 
@@ -176,7 +176,7 @@ export default function CustomizedAccordions() {
                                 mx: '1.5rem',
                                 fontSize: '1rem',
                             }}>
-                                <Link to='/resourceHistoricalAnalysis' style={{ 'textDecoration': "none", 'color': '#000000' }}>
+                                <Link to='/furnaceHistoricalAlarms' style={{ 'textDecoration': "none", 'color': '#000000' }}>
                                     Alarmes
                                 </Link>
                             </Typography>

@@ -22,9 +22,9 @@ export default function SectorsCard() {
                 '& > :not(style)': {
                     position: 'relative',
                     m: '1rem',
-                    mt: '1rem',
+                    mt: '1.5rem',
                     width: '11rem',
-                    height: '14rem',
+                    height: '13rem',
                     border: "solid",
                     borderColor: "#DCDCDC",
                     borderRadius: '1rem',
@@ -42,14 +42,12 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
-
 
             <React.Fragment>
                 <Paper elevation={2}>
@@ -60,13 +58,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Pré-Zona 1</Title>
@@ -76,13 +74,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Pré-Zona 2</Title>
@@ -92,13 +90,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Zona 1</Title>
@@ -108,13 +106,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Zona 2</Title>
@@ -124,13 +122,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Zona 3</Title>
@@ -140,13 +138,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Zona 4</Title>
@@ -156,13 +154,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Zona 4</Title>
@@ -172,13 +170,13 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
+
             <React.Fragment>
                 <Paper elevation={2}>
                     <Title>Zona 5</Title>
@@ -188,14 +186,12 @@ export default function SectorsCard() {
                     </Typography>
                     <InputField />
                     <Divider sx={{ background: "#DCDCDC", position: 'relative', top: '1.5rem' }} />
-                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.8rem' }}>
+                    <Typography color="#1C1C1C" sx={{ flex: 1, position: 'relative', top: '1.5rem' }}>
                         MÁXIMO
                         <InputField />
                     </Typography>
-
                 </Paper>
             </React.Fragment>
         </Box >
-
     )
 }
