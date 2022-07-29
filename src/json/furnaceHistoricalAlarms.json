@@ -1,0 +1,40 @@
+{
+    "furnaceHistoricalAlarms": [
+        {
+            "id": 0,
+            "title": "Fornos - Consulta Histórico de Alarmes",
+            "furnace": "FS07",
+            "initialDate": "8564265",
+            "finalDate": "9653214"
+        },
+        {
+            "id": 1,
+            "title": "Alarmes"
+        },
+        {
+            "id": 2,
+            "dateTime": "8465241",
+            "historicalAlarms": "Falha de comunicação Pré-Zona 2"
+        },
+        {
+            "id": 3,
+            "dateTime": "8465244",
+            "historicalAlarms": "Comunicação Normalizada Pré-Zona 2"
+        },
+        {
+            "id": 4,
+            "dateTime": "8465246",
+            "historicalAlarms": "Temperatura Alta Zona 3 "
+        },
+        {
+            "id": 5,
+            "dateTime": "8465248",
+            "historicalAlarms": "Temperatura Baixa Zona 2"
+        },
+        {
+            "id": 6,
+            "dateTime": "8465254",
+            "historicalAlarms": "Temperatura Normalizada Zona 3"
+        }
+    ]
+}

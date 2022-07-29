@@ -1,0 +1,57 @@
+{
+    "sinteringRealTimeAnalysis": [
+        {
+            "id": 0,
+            "title": "Setores",
+            "sectorSelector": "SINTER."
+        },
+        {
+            "id": 1,
+            "title": "FS07",
+            "statusColor": "producing",
+            "link": "/fornoTempoReal/FS07",
+            "model": {
+                "title": "Modelo",
+                "textValue": "",
+                "value": "3941",
+                "icon": ""
+            },
+            "conveyor": {
+                "title": "Esteira",
+                "textValue": "",
+                "value": "115",
+                "icon": ""
+            }
+        },
+        {
+            "id": 2,
+            "title": "BAL02",
+            "statusColor": "noData",
+            "link": "/maquinaTempoRealBAL02",
+            "availability": {
+                "title": "Disponibilidade",
+                "textValue": "",
+                "value": "NULL",
+                "icon": ""
+            },
+            "efficiency": {
+                "title": "Eficiência",
+                "textValue": "",
+                "value": "NULL",
+                "icon": "/src/images/eficiencia.jpg"
+            },
+            "cycleTime": {
+                "title": "Tempo de Ciclo",
+                "textValue": "",
+                "value": "NULL",
+                "icon": "/src/images/tempoDeCiclo.jpg"
+            },
+            "productivity": {
+                "title": "Produtividade",
+                "textValue": "NULL",
+                "value": "",
+                "icon": ""
+            }
+        }
+    ]
+}

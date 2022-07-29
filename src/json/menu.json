@@ -1,0 +1,71 @@
+{
+    "menu": [
+            {
+                "id": 0,
+                "title": "BLEISTAHL",
+                "icon": "/src/images/logoBleistahl.jpg",
+                "link": "",
+                "items": []
+            },
+            {
+                "id": 1,
+                "title": "Dashboard",
+                "icon": "/src/images/dashboard.jpg",
+                "link": "/dashboard",
+                "items": []
+            },
+            {
+                "id": 2,
+                "title": "Setores",
+                "icon": "/src/images/setores.jpg",
+                "link": "/setores",
+                "items": []
+            },
+          
+            {
+                "id": 3,
+                "title": "Estatísticas",
+                "icon": "/src/images/estatisticas.jpg",
+                "acordeon": [
+                    {
+                        "title": "Tempo Real",
+                        "link": "/maquinaTempoReal"
+                    },
+                    {
+                        "title": "Históricos",
+                        "link": "/maquinaHistorico"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Fornos",
+                "icon": "/src/images/fornos.jpg",
+                "acordeon": [
+                    {
+                        "title": "Tempo Real",
+                        "link": "/fornosTempoReal"
+                    },
+                    {
+                        "title": "Históricos",
+                        "link": "/fornoHistorico"
+                    },
+                    {
+                        "title": "Alarmes",
+                        "link": "/fornosAlarmes"
+                    },
+                    {
+                        "title": "Limites Temp.",
+                        "link": "/fornosLimitesTemp"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "Login",
+                "icon": "/src/images/login.jpg",
+                "link": "/login",
+                "items": []
+            }
+    ]
+}

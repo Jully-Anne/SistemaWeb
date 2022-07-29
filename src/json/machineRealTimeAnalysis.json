@@ -1,0 +1,126 @@
+{
+    "machineRealTimeAnalysis": [
+        {
+            "id": 0,
+            "title": "Consultas Tempo Real",
+            "sectorSelector": "PRP Anéis",
+            "resourceSelector": "PC20"
+        },
+        {
+            "id": 1,
+            "op": "00000/0",
+            "batch": "00000",
+            "model": "2107"
+        },
+        {
+            "id": 2,
+            "availability": [
+                {
+                    "title": "Disponibilidade",
+                    "textValue": "80%",
+                    "value": "0.8",
+                    "icon": ""
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "efficiency": [
+                {
+                    "title": "Eficiência",
+                    "textValue": "50%",
+                    "value": "0.5",
+                    "icon": ""
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "cycleTime": [
+                {
+                    "title": "Tempo de Ciclo",
+                    "textValue": "5.1s",
+                    "value": "8462213",
+                    "icon": ""
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "productivity": [
+                {
+                    "title": "Produtividade",
+                    "textValue": "45/50",
+                    "value": "",
+                    "icon": ""
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "produced": [
+                {
+                "title": "Produzido",
+                "textValue": "25214/30000",
+                "value": "",
+                "icon": ""
+            }
+        ]
+        },
+        {
+            "id": 7,
+            "availabilityGraph": {
+                "producing": {
+                    "title": "Produzindo",
+                    "percentage": "50%",
+                    "hours": "0,5h"
+                },
+                "stopped": {
+                    "title": "Parado",
+                    "percentage": "20%",
+                    "hours": "0,2h"
+                },
+                "noProgramming": {
+                    "title": "S/Programação",
+                    "percentage": "20%",
+                    "hours": "0,2h"
+                },
+                "noData": {
+                    "title": "S/Dados",
+                    "percentage": "10%",
+                    "hours": "0,1h"
+                }
+            }
+
+        },
+        {
+            "id": 8,
+            "productivityTable": [
+                {
+                    "dateTime": "8945200",
+                    "partsPerMinute": "50",
+                    "totalProduction": "22542",
+                    "statusColor": ""
+                },
+                {
+                    "dateTime": "8945200",
+                    "partsPerMinute": "50",
+                    "totalProduction": "22542",
+                    "statusColor": ""
+                },
+                {
+                    "dateTime": "8945200",
+                    "partsPerMinute": "50",
+                    "totalProduction": "22542",
+                    "statusColor": ""
+                },
+                {
+                    "dateTime": "8945200",
+                    "partsPerMinute": "50",
+                    "totalProduction": "22542",
+                    "statusColor": ""
+                }
+            ]
+        }
+    ]
+}
