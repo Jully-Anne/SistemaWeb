@@ -1,4 +1,4 @@
-//Data Progress Bar - Componente com caixa de informações sobre a máquina para a tela Consultas Tempo Real
+//Componente com caixa de informações sobre a máquina para a tela Consultas Tempo Real
 import * as React from 'react';
 import LinearProgress, { LinearProgressProps } from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import { Paper } from '@mui/material';
 
 
-function DataProgressBar(props: LinearProgressProps & { value: number }) {
+function MachineRealTimeProgressBar(props: LinearProgressProps & { value: number }) {
   return (
   
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -92,7 +92,7 @@ export default function ProgressBar() {
             DISPONIBILIDADE
           </Typography>
 
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <MachineRealTimeProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
       <React.Fragment>
@@ -100,7 +100,7 @@ export default function ProgressBar() {
           <Typography color="primary" sx={{ flex: 1 }}>
             EFICIÊNCIA
           </Typography>
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <MachineRealTimeProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
       <React.Fragment>
@@ -121,7 +121,7 @@ export default function ProgressBar() {
           <Typography color="#1C1C1C" sx={{ flex: 1 }}>
             45/50 pçs./min.
           </Typography>
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <MachineRealTimeProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
       <React.Fragment>
@@ -132,7 +132,7 @@ export default function ProgressBar() {
           <Typography color="#1C1C1C" sx={{ flex: 1 }}>
             10249/20000 pçs.
           </Typography>
-          <DataProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
+          <MachineRealTimeProgressBar value={progress} sx={{ width: '98%', alignItems: 'center' }} />
         </Paper>
       </React.Fragment>
     </Box >

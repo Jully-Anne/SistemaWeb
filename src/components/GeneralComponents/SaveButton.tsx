@@ -1,10 +1,10 @@
-//Save Button - Botão para atualizar e salvar os novos limites de temperatura
+//Botão para salvar e atualizar os novos limites de temperatura
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/system';
 
-export default function QueryButton() {
+export default function SaveButton() {
     return (
         <div>
             <Box sx={{ maxWidth: '1rem', width: '100%', left: '0.02rem', paddingX:'40%'}}>

@@ -1,4 +1,4 @@
-//TimeSeletor - Seletor para selecionar o tempo desejado entre intervalos de dados para a formação do gráfico de linhas (Tela de consulta de históricos)
+//Seletor de tempo entre intervalos de dados desejado para configuração do gráfico de linhas
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

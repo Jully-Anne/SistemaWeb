@@ -1,15 +1,15 @@
-//Furnace Real Time - Tela de consulta de temperaturas em tempo real e os últimos alarmes do forno que for selecionado pelo usuário
+//Tela de consulta de temperaturas em tempo real e os últimos alarmes do forno que for selecionado pelo usuário
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-import Title from '../../GeneralComponents/Title';
-import FurnaceRealTimeCard from '../../StatisticsComponents/FurnaceRealTimeCard';
-import FurnaceSelector from '../../GeneralComponents/FurnaceSelector';
-import FurnaceRealTimeAlarmsTable from '../../StatisticsComponents/FurnaceRealTimeAlarmsTable';
-import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
+import Title from '../../GeneralComponents/Title';
+import FurnaceSelector from '../../GeneralComponents/FurnaceSelector';
+import QueryButton from '../../GeneralComponents/QueryButton';
+import FurnaceRealTimeCard from '../../StatisticsComponents/FurnaceRealTimeCard';
+import FurnaceRealTimeAlarmsTable from '../../StatisticsComponents/FurnaceRealTimeAlarmsTable';
 
 const mdTheme = createTheme();
 
@@ -60,6 +60,7 @@ function FurnaceRealTimeAnalysis() {
             <Divider sx={{ position: "relative", top: '0.5rem', left: '0.02rem' }} />
 
             <FurnaceRealTimeCard />
+            
             {/* FurnaceRealTimeAlarmsTable */}
             <Grid item xs={4} md={7} lg={7}>
                 <Grid
@@ -81,10 +82,7 @@ function FurnaceRealTimeAnalysis() {
                 >
                     <FurnaceRealTimeAlarmsTable />
                 </Grid>
-
             </Grid>
-
-
         </ThemeProvider>
     );
 }

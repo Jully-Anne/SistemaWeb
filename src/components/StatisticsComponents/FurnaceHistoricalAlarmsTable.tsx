@@ -1,4 +1,4 @@
-//Furnace Historical Alarms Table - Tabela de histórico de alarmes do forno selecionado
+//Tabela de histórico de alarmes do forno selecionado
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -78,7 +78,7 @@ export default function FurnaceHistoricalAlarmsTable() {
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
-              <TableCell align="center" colSpan={5}  sx={{color: '#1976d2', fontSize: '1.2rem'}} >
+              <TableCell align="center" colSpan={5}  sx={{color: '#1976D2', fontSize: '1.2rem'}} >
                 Alarmes
               </TableCell>
               

@@ -1,4 +1,4 @@
-//Furnace Real Time Alarms Table - Tabela dos últimos alarmes gerados pelo forno selecionado
+//Tabela dos últimos alarmes gerados pelo forno selecionado
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';

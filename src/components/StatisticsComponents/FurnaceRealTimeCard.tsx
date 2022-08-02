@@ -1,17 +1,16 @@
-//Furnace Real Time Card - Card com as informações em tempo real de cada zona do forno selecionado - temperaturas de setpoint e real.
+//Card com as informações em tempo real de cada zona do forno selecionado - temperaturas de setpoint e real.
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
 import { Box } from '@mui/system';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
-import LinearProgressWithLabel from './ProgressBar';
 
 
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
-export default function SectorsCard() {
+export default function FurnaceRealTimeCard() {
     return (
 
         <Box

@@ -1,4 +1,4 @@
-//Furnace Selector - Componente para selecionar o forno desejado para a análise dos dados
+//Seletor do forno desejado para a análise dos dados
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

@@ -1,3 +1,4 @@
+//Tabela com os status das máquinas em tempo real na tela de dashboard
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Menu, { MenuProps } from '@mui/material/Menu';
@@ -58,8 +59,8 @@ const StyledMenu = styled((props: MenuProps) => (
   },
 }));
 
-//Tabela de status atual de funcionamento das máquinas
-export default function StatusTable() {
+//Status Table Sectors - Tabela de status em tempo real de funcionamento das m1áquinas no setor selecionado
+export default function StatusTableSectors() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -86,11 +87,11 @@ export default function StatusTable() {
           padding: '0.1rem',
           top: '0.1rem',
           mb: '0.5rem',
-          backgroundColor: "#FFFFFF",//Fundo branco com hover desativado
-          color: "#1C1C1C",//Letra preta com hover desativado
+          backgroundColor: "#FFFFFF",
+          color: "#1C1C1C",
           '&:hover': {
-            backgroundColor: "#0060FF",//Fundo azul com hover ativado
-            color: "#FFFFFF"//Letra branca com hover ativado
+            backgroundColor: "#1976D2",
+            color: "#FFFFFF"
           },
         }}
       >

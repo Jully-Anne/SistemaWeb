@@ -1,4 +1,4 @@
-//Initial Date and Time Selector- Componente de seleção de data e hora inicial para busca de informações 
+//Seletor de data e hora inicial para busca de informações 
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -7,7 +7,7 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import Stack from '@mui/material/Stack';
 import { Grid } from '@mui/material';
 
-export default function SelectorData() {
+export default function InitialDateSelector() {
   const [dataInicial, setDataInicial] = React.useState<Date | null>(new Date());
 
   return (

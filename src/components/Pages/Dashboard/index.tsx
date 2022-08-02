@@ -1,4 +1,4 @@
-//Tela Dashboard-Tela inicial do sistema com informações gerais de cada setor
+//Tela inicial do sistema com informações gerais de cada setor e status das máquinas por setor
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import React from 'react';

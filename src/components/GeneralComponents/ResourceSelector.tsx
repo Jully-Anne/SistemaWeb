@@ -1,4 +1,4 @@
-//Resource Selector - Componente com 1 seletor para a escolha e seleção da máquina para a busca de informações 
+//Seletor de máquina para consulta e análise de informações da máquina selecionada
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

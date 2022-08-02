@@ -1,4 +1,4 @@
-//Query Button - Componente botão para gerar a busca e pesquisa dos dados solicitados
+//Botão para gerar a busca e pesquisa dos dados solicitados
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';

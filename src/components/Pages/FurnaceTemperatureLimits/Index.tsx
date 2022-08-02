@@ -1,12 +1,13 @@
-//Furnace Historical Analysis - Tela de consulta e análise do histórico de temperaturas do forno escolhido e selecionado
+//Tela para a alteração dos limites de temperatura estabelecidos para os alarmes dos fornos
+//Só pode ser acessada com login autorizado
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Title from '../../GeneralComponents/Title';
-import FurnaceTemperatureLimitsCard from '../../StatisticsComponents/FurnaceTemperatureLimitsCard';
 import FurnaceSelector from '../../GeneralComponents/FurnaceSelector';
 import QueryButton from '../../GeneralComponents/QueryButton';
+import FurnaceTemperatureLimitsCard from '../../StatisticsComponents/FurnaceTemperatureLimitsCard';
 import SaveButton from '../../GeneralComponents/SaveButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
@@ -20,8 +21,6 @@ function FurnaceTemperatureLimits() {
     };
 
     return (
-
-
         <ThemeProvider theme={mdTheme}>
         <Title>
             <Typography
@@ -63,8 +62,6 @@ function FurnaceTemperatureLimits() {
 
             <FurnaceTemperatureLimitsCard />
                 <SaveButton />
-                           
-       
         </ThemeProvider>
     );
 }

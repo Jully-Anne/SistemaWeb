@@ -1,3 +1,4 @@
+//Card de informações gerais sobre a máquina na tela de setores
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
@@ -7,12 +8,10 @@ import Divider from '@mui/material/Divider';
 import LinearProgressWithLabel from './ProgressBar';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 
-
-
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
-export default function Card() {
+export default function MachineCard() {
     return (
 
         <Box

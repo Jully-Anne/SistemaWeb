@@ -1,4 +1,4 @@
-//Print Button - Componente botão para gerar o print e a impressão a tela
+//Botão para gerar o print e a impressão a tela de consulta 
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';

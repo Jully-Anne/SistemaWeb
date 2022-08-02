@@ -1,23 +1,21 @@
-import * as React from 'react';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+//Resource Real Time Analysis - Tela para consulta e análise de dados das máquinas em tempo real
+import React from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
+import Typography from '@mui/material/Typography'
+import Divider from '@mui/material/Divider';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Title from '../../GeneralComponents/Title';
-import { HistoricalLineChart } from '../../StatisticsComponents/HistoricalLineChart';
-import { PieChart } from '../../StatisticsComponents/PieChart';
+import { CssBaseline, Grid } from '@mui/material';
 import { Box, Container } from '@mui/system';
-import { Divider, Grid, Typography } from '@mui/material';
-import HistoricalDataProgressBar from '../../StatisticsComponents/HistoricalDataProgressBar'
-import InitialDateSelector from '../../GeneralComponents/InitialDateSelector'
-import FinalDateSelector from '../../GeneralComponents/FinalDateSelector'
-import QueryButton from '../../GeneralComponents/QueryButton'
-import ResourceSelector from '../../GeneralComponents/ResourceSelector'
+import { styled } from '@mui/material/styles';
+import Title from '../../GeneralComponents/Title';
 import SectorSelector from '../../GeneralComponents/SectorSelector'
-import HistoricalTable from '../../StatisticsComponents/HistoricalTable';
-import PrintButton from '../../GeneralComponents/PrintButton';
-import ExportExcelButton from '../../GeneralComponents/ExportExcelButton';
-import TimeSelector from '../../GeneralComponents/TimeSelector';
+import ResourceSelector from '../../GeneralComponents/ResourceSelector'
+import QueryButton from '../../GeneralComponents/QueryButton'
+import MachineRealTimeProgressBar from '../../StatisticsComponents/MachineRealTimeProgressBar'
+import { ResourceRealTimeLineChart } from '../../StatisticsComponents/ResourceRealTimeLineChart';
+import { PieChart } from '../../StatisticsComponents/PieChart';
+
 
 const drawerWidth: number = 240;
 
@@ -71,7 +69,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 const mdTheme = createTheme();
 
-function ResourceHistoricalAnalysis() {
+function MachineRealTimeAnalysis() {
     const [open, setOpen] = React.useState(true);
     const toggleDrawer = () => {
         setOpen(!open);
@@ -91,41 +89,15 @@ function ResourceHistoricalAnalysis() {
                             noWrap
                             sx={{ flexGrow: 1 }}
                         >
-                            Consulta Históricos
+                            Consulta Tempo Real
                         </Typography>
-                        <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem', width: '100%', maxWidth: '100%' }} />
+                        <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem' }} />
                     </Title>
 
 
-                    <Container maxWidth="lg" sx={{ mt: '1.5rem' }}>
+                    <Container maxWidth="lg" sx={{ mt: '1.5rem', mb: '0rem' }}>
                         <Grid container spacing={3} >
                             {/* Options */}
-                            <Grid item xs={6} md={8} lg={20} >
-                                <Grid
-                                    sx={{
-
-                                        p: 1,
-                                        display: 'flex',
-                                        flexWrap: 'wrap',
-                                        position: 'relative',
-                                        flexDirection: 'row',
-                                        minHeight: '2rem',
-                                        maxHeight: '22rem',
-                                        minWidth: '17rem',
-                                        maxWidth: "65rem",
-                                        alignItems: 'center'
-                                    }}
-                                >
-                                    <SectorSelector />
-                                    <ResourceSelector />
-                                    <InitialDateSelector />
-                                    <FinalDateSelector />
-                                    <TimeSelector />
-                                 
-                                </Grid>
-                      
-                            {/* Options */}
-                            <Grid container spacing={1} >
                             <Grid item xs={6} md={8} lg={20} >
                                 <Grid
                                     sx={{
@@ -142,15 +114,12 @@ function ResourceHistoricalAnalysis() {
                                         alignItems: 'center'
                                     }}
                                 >
-                                        <QueryButton />
-                                        <PrintButton />
-                                        <ExportExcelButton />
-                                    </Grid>
-                      
-                                
+                                    <SectorSelector />
+                                    <ResourceSelector />
+                                    <QueryButton />
+                                </Grid>
+
                                 <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem' }} />
-                            </Grid>
-                            </Grid>
                             </Grid>
 
                             {/* DataProgressBar */}
@@ -167,13 +136,12 @@ function ResourceHistoricalAnalysis() {
                                         borderRadius: '1rem',
                                     }}
                                 >
-                                    <HistoricalDataProgressBar />
+                                    <MachineRealTimeProgressBar />
                                 </Grid>
                                 <Divider sx={{ position: 'relative', top: '0.5rem', left: '0.02rem' }} />
                             </Grid>
-
-                            {/* LineChart */}
-                            <Grid item xs={8} sm={10} md={11} lg={18}>
+                            {/* LineChart*/}
+                            <Grid item xs={5} md={7} lg={9}>
                                 <Grid
                                     sx={{
                                         mt: 0,
@@ -181,41 +149,18 @@ function ResourceHistoricalAnalysis() {
                                         display: 'flex',
                                         flexWrap: 'wrap',
                                         flexDirection: 'row',
-                                        minHeight: '15rem',
-                                        maxHeight: '28rem',
-                                        minWidth: '5rem',
-                                        maxWidth: "70rem",
-                                        border: 'solid',
-                                        borderColor: '#DCDCDC',
-                                        borderRadius: '1rem',
-                                 
-                                    }}
-                                >
-                                    <HistoricalLineChart />
-                                </Grid>
-                                <Divider sx={{ position: 'relative', top: '0.6rem', left: '0.02rem' }} />
-                            </Grid>
-                            {/* HistoricalTable */}
-                            <Grid item xs={5} md={7} lg={7}>
-                                <Grid
-                                    sx={{
-                                        mt: 0,
-                                        p: 1,
-                                        display: 'flex',
-                                        flexWrap: 'wrap',
-                                        flexDirection: 'row',
-                                        minHeight: '20rem',
-                                        maxHeight: '35rem',
-                                        minWidth: '22rem',
-                                        maxWidth: "35rem",
+                                        minHeight: '23rem',
+                                        maxHeight: '23rem',
+                                        minWidth: '23rem',
+                                        maxWidth: "60rem",
                                         border: 'solid',
                                         borderColor: '#DCDCDC',
                                         borderRadius: '1rem'
                                     }}
                                 >
-                                    <HistoricalTable />
+                                    <ResourceRealTimeLineChart />
                                 </Grid>
-                                <Divider sx={{ position: 'relative', top: '0.6rem' }} />
+
                             </Grid>
                             {/* PieChart */}
                             <Grid item xs={12} md={6} lg={1}>
@@ -241,10 +186,11 @@ function ResourceHistoricalAnalysis() {
                     </Container>
                 </Box>
             </Box>
+
         </ThemeProvider>
     );
 }
 
 export default function Index() {
-    return <ResourceHistoricalAnalysis />;
+    return <MachineRealTimeAnalysis />;
 }

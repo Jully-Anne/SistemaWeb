@@ -1,4 +1,4 @@
-//Acordeon Menu -  abre aba de opções de links quando clicado no menu
+//Menu expansível com opções de seleção 
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
@@ -13,7 +13,6 @@ import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import { Box } from '@mui/system';
 import { Collapse } from '@mui/material';
-
 
 const Accordion = styled((props: AccordionProps) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -69,7 +68,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     borderTop: '0.1rem solid rgba(0, 0, 0, .125)',
 }));
 
-export default function CustomizedAccordions() {
+export default function AcordeonMenu() {
 
     const [expanded, setExpanded] = React.useState<string | false>('panel1');
     const [open, setOpen] = React.useState(false)
@@ -109,7 +108,7 @@ export default function CustomizedAccordions() {
                                 fontSize: '1rem',
 
                             }}>
-                                <Link to='/resourceRealTimeAnalysis' style={{ 'textDecoration': 'none', color: '#000000' }}>
+                                <Link to='/machineRealTimeAnalysis' style={{ 'textDecoration': 'none', color: '#000000' }}>
                                     Tempo Real
                                 </Link>
                             </Typography>
@@ -123,7 +122,7 @@ export default function CustomizedAccordions() {
                                 fontSize: '1rem',
 
                             }}>
-                                <Link to='/resourceHistoricalAnalysis' style={{ 'textDecoration': "none", 'color': '#000000' }}
+                                <Link to='/machineHistoricalAnalysis' style={{ 'textDecoration': "none", 'color': '#000000' }}
                                 >Hsitóricos
                                 </Link>
                             </Typography>

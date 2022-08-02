@@ -1,19 +1,20 @@
-//Furnace Historical Alarms - Tela para consulta de históricos de alarmes do forno selecionado na data selecionada
+//Tela para consulta de históricos de alarmes do forno selecionado na data selecionada
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Title from '../../GeneralComponents/Title';
 import { Box, Container } from '@mui/system';
 import { Divider, Grid, Typography } from '@mui/material';
+import Title from '../../GeneralComponents/Title';
+import FurnaceSelector from '../../GeneralComponents/FurnaceSelector'
 import InitialDateSelector from '../../GeneralComponents/InitialDateSelector'
 import FinalDateSelector from '../../GeneralComponents/FinalDateSelector'
 import QueryButton from '../../GeneralComponents/QueryButton'
-import FurnaceSelector from '../../GeneralComponents/FurnaceSelector'
-import FurnaceHistoricalAlarmsTable from '../../StatisticsComponents/FurnaceHistoricalAlarmsTable';
 import PrintButton from '../../GeneralComponents/PrintButton';
 import ExportExcelButton from '../../GeneralComponents/ExportExcelButton';
+import FurnaceHistoricalAlarmsTable from '../../StatisticsComponents/FurnaceHistoricalAlarmsTable';
+
 
 const drawerWidth: number = 240;
 

@@ -1,20 +1,21 @@
 import React from 'react'
-import { Box, CssBaseline, Toolbar, IconButton, Typography, Button, Avatar, Drawer, Divider, CSSObject, styled, Theme, useTheme, AppBarProps, AppBar, ListItemIcon, ListItemText, ListItemButton, Paper, List } from '@mui/material'
+import { Box, CssBaseline, Toolbar, IconButton, Typography, Button, Avatar, Drawer, Divider, CSSObject, 
+styled, Theme, useTheme, AppBarProps, AppBar, ListItemIcon, ListItemText, ListItemButton, Paper, List } from '@mui/material'
 import { ChevronLeft, ChevronRight, DashboardOutlined, Menu, Person, PrecisionManufacturing } from '@mui/icons-material'
 import SettingsIcon from '@mui/icons-material/Settings';
-import { useAuth } from 'react-oidc-context'
-import { Route, Routes, useNavigate } from 'react-router-dom'
-import CustomizedAccordions from './GeneralComponents/AcordeonMenu';
-import Dashboard from './Pages/Dashboard/index'
-import Sectors from './Pages/SectorsRealTimeAnalysis'
-import ResourceRealTimeAnalysis from './Pages/ResourceRealTimeAnalysis/Index'
-import ResourceHistoricalAnalysis from './Pages/ResourceHistoricalAnalysis/Index'
-import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis/Index'
-import FurnaceHistoricalAnalysis from './Pages/FurnaceHistoricalAnalysis/Index'
-import FurnaceHistoricalAlarms from './Pages/FurnaceHistoricalAlarms/Index'
-import FurnaceTemperatureLimits from './Pages/FurnaceTemperatureLimits/Index'
-import Settings from './Pages/Settings/index'
-import Profile from './Profile'
+import { useAuth } from 'react-oidc-context';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import AcordeonMenu from './GeneralComponents/AcordeonMenu';
+import Dashboard from './Pages/Dashboard';
+import Sectors from './Pages/SectorsRealTimeAnalysis';
+import MachineRealTimeAnalysis from './Pages/MachineRealTimeAnalysis/Index';
+import MachineHistoricalAnalysis from './Pages/MachineHistoricalAnalysis/Index';
+import FurnaceRealTimeAnalysis from './Pages/FurnaceRealTimeAnalysis/Index';
+import FurnaceHistoricalAnalysis from './Pages/FurnaceHistoricalAnalysis/Index';
+import FurnaceHistoricalAlarms from './Pages/FurnaceHistoricalAlarms/Index';
+import FurnaceTemperatureLimits from './Pages/FurnaceTemperatureLimits/Index';
+import Settings from './Pages/Settings/index';
+import Profile from './Profile';
 
 
 const drawerWidth = 200
@@ -161,7 +162,7 @@ const AppProtected = () => {
           <AppMenuItem to="/dashboard" label="Dashboard"  icon={<DashboardOutlined sx={{color: '#1976D2'}}/>} />
           <Divider />
           <AppMenuItem to="/sectors" label="Setores"  icon={<PrecisionManufacturing sx={{color: '#1976D2'}}/>} />
-          <CustomizedAccordions />
+          <AcordeonMenu />
           <AppMenuItem to="/settings" label="Configurações"  icon={<SettingsIcon sx={{color: '#1976D2'}}/>} />
           <Divider />
           <AppMenuItem to="/login" label="Login" icon={<Person sx={{color: '#1976D2'}}/>} />
@@ -210,15 +211,15 @@ const AppProtected = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/sectors" element={<Sectors />} />
-          <Route path='/resourceRealTimeAnalysis' element={<ResourceRealTimeAnalysis />} />
-          <Route path='/resourceHistoricalAnalysis' element={<ResourceHistoricalAnalysis />} />
+          <Route path='/machineRealTimeAnalysis' element={<MachineRealTimeAnalysis />} />
+          <Route path='/machineHistoricalAnalysis' element={<MachineHistoricalAnalysis />} />
           <Route path='/furnaceRealTimeAnalysis' element={<FurnaceRealTimeAnalysis />} />
           <Route path='/furnaceHistoricalAnalysis' element={<FurnaceHistoricalAnalysis />} />
           <Route path='/furnaceHistoricalAlarms' element={<FurnaceHistoricalAlarms />} />
           <Route path='/furnaceTemperatureLimits' element={<FurnaceTemperatureLimits />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/login" element={<Profile />} />
-
+          
         </Routes>
       </Box>
     </Box>

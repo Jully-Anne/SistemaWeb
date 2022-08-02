@@ -1,4 +1,4 @@
-//Sector Selector - Componente com 1 seletor para a escolha e seleção de setor para a busca de informações 
+//Seletor de setor para filtrar as máquinas de acordo com o setor selecionado
 import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

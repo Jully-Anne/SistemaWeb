@@ -2,13 +2,13 @@
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
-import Title from '../../GeneralComponents/Title';
-import Card from '../../StatisticsComponents/ResourceCard';
-import Selector from '../../GeneralComponents/SectorSelector';
-import QueryButton from '../../GeneralComponents/QueryButton';
 import { Container } from '@mui/system';
 import { Grid } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Title from '../../GeneralComponents/Title';
+import Selector from '../../GeneralComponents/SectorSelector';
+import QueryButton from '../../GeneralComponents/QueryButton';
+import MachineCard from '../../StatisticsComponents/MachineCard';
 
 const mdTheme = createTheme();
 
@@ -57,7 +57,7 @@ function Sectors() {
                 </Grid>
             </Container>
             <Divider sx={{ position: "relative", top: '1.5rem', left: '0.02rem' }} />
-            <Card />
+            <MachineCard />
         </ThemeProvider>
     );
 }

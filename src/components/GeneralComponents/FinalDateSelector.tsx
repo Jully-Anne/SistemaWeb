@@ -1,4 +1,4 @@
-//Final Date and Time Selector- Componente de seleção de data e hora final para busca de informações 
+//Seleção de data e hora final para busca de informações históricas
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import { Grid } from '@mui/material';
 
 
-export default function SelectorData() {
+export default function FinalDateSelector() {
 
   const [dataFinal, setDataFinal] = React.useState<Date | null>(new Date());
 

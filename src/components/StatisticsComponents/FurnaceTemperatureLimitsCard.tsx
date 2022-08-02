@@ -1,4 +1,4 @@
-//Furnace Temperature Limits Card - Card para alteração dos limites de temperatura estipulados para os alarmes do sistema para cada zona de cada forno
+//Card para alteração dos limites de temperatura estipulados para os alarmes do sistema para cada zona de cada forno
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Title from '../GeneralComponents/Title';
@@ -8,11 +8,10 @@ import Divider from '@mui/material/Divider';
 import InputField from './InputField'
 
 
-
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
-export default function SectorsCard() {
+export default function FurnaceTemperatureLimitsCard() {
     return (
 
         <Box

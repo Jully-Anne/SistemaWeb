@@ -9,7 +9,6 @@ import { Container } from '@material-ui/core';
 import LinearProgressWithLabel from './ProgressBar';
 import StatusTable from './StatusTableSectors';
 
-
 function preventDefault(event: React.MouseEvent) {
     event.preventDefault();
 }
@@ -34,7 +33,6 @@ export default function SectorsCard() {
         >
             <React.Fragment>
                 <Paper elevation={2}>
-
                     <Title>Balanças</Title>
                     <Divider sx={{ background: "#DCDCDC" }} />
                     <Typography color="#1C1C1C" sx={{ flex: 1 }}>

@@ -1,4 +1,4 @@
-//Export Excel Button - Componente de botão para gerar a exportação para o excel da tabela de dados consultada
+//Botão para gerar a exportação para o excel da tabela de dados consultada
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';

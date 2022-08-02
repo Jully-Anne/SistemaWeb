@@ -1,8 +1,8 @@
-//InputField - Caixa de texto para digitar e alterar novos dados
+//Caixa de texto para digitar e alterar novos dados
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function TextFieldSizes() {
+export default function InputField() {
   return (
     <Box
       component="form"

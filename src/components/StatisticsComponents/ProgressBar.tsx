@@ -1,3 +1,4 @@
+//Barra com informação de progresso de um dado sobre a máquina ou setor
 import * as React from 'react';
 import LinearProgress, { LinearProgressProps } from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';

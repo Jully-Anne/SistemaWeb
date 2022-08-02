@@ -1,159 +1,352 @@
 {
-    "dashboard": [
+  "dashboard": [
+    {
+      "id": 0,
+      "title": "Dashboard"
+    },
+    {
+      "id": 1,
+      "title": "PRP ANÉIS",
+      "link": "/prpAneis",
+      "availability": {
+        "title": "Disponibilidade",
+        "textValue": "50%",
+        "value": "0.5",
+        "icon": ""
+      },
+      "eficiency": {
+        "title": "Eficiência",
+        "textValue": "75%",
+        "value": "0.75",
+        "icon": ""
+      },
+      "produced": {
+        "title": "Produzido",
+        "textValue": "23568/45236",
+        "value": "23568/45236",
+        "icon": ""
+      },
+      "status": [
         {
-            "id": 0,
-            "title": "Dashboard"
+          "title": "STATUS",
+          "link": "/tabelaStatus"
         },
         {
-            "id": 1,
-            "title": "PRP ANÉIS",
-            "link": "/prpAneis",
-            "availability": {
-                "title": "Disponibilidade",
-                "textValue": "50%",
-                "value": "0.5",
-                "icon": ""
-            },
-            "eficiency": {
-                "title": "Eficiência",
-                "textValue": "75%",
-                "value": "0.75",
-                "icon": ""
-            },
-            "produced": {
-                "title": "Produzido",
-                "textValue": "23568/45236",
-                "value": "23568/45236",
-                "icon": ""
-            },
-            "status": [
-                {
-                    "title": "STATUS",
-                    "link": "/tabelaStatus"
-                },
-                {
-                    "icon": "/src/images/produzindo.jpg",
-                    "value": "5"
-                },
-                {
-                    "icon": "/src/images/semProgramacao.jpg",
-                    "value": "2"
-                },
-                {
-                    "icon": "/src/images/parado.jpg",
-                    "value": "4"
-                }
-            ],
-            "statusTable": [
-                {
-                    "title": "PC20",
-                    "statusColor": "stopped",
-                    "time": "34774808"
-                },
-                {
-                    "title": "PC18",
-                    "statusColor": "producing",
-                    "time": "NULL"
-                },
-                {
-                    "title": "PC19",
-                    "statusColor": "noProgramming",
-                    "time": "NULL"
-                },
-                {
-                    "title": "PC17",
-                    "statusColor": "noData",
-                    "time": "84732723"
-                },
-                {
-                    "title": "PC16",
-                    "statusColor": "stopped",
-                    "time": "18347493"
-                }
-            ]
+          "icon": "/src/images/produzindo.jpg",
+          "value": "5"
         },
         {
-            "id": 2,
-            "title": "PRP GUIAS",
-            "link": "/prpGuias",
-            "availability": {
-                "title": "Disponibilidade",
-                "textValue": "50%",
-                "value": "0.5",
-                "icon": ""
-            },
-            "eficiency": {
-                "title": "Eficiência",
-                "textValue": "75%",
-                "value": "0.75",
-                "icon": ""
-            },
-            "produced": {
-                "title": "Produzido",
-                "textValue": "23568/45236",
-                "value": "23568/45236",
-                "icon": ""
-            },
-            "status": [
-                {
-                    "title": "STATUS",
-                    "link": "/tabelaStatus"
-                },
-                {
-                    "icon": "/src/images/produzindo.jpg",
-                    "value": "5"
-                },
-                {
-                    "icon": "/src/images/semProgramacao.jpg",
-                    "value": "2"
-                },
-                {
-                    "icon": "/src/images/parado.jpg",
-                    "value": "4"
-                }
-            ],
-            "statusTable": [
-                {
-                    "title": "PC01",
-                    "statusColor": "stopped",
-                    "time": "34774808"
-                },
-                {
-                    "title": "PC03",
-                    "statusColor": "producing",
-                    "time": "NULL"
-                },
-                {
-                    "title": "PC05",
-                    "statusColor": "noProgramming",
-                    "time": "NULL"
-                },
-                {
-                    "title": "PC12",
-                    "statusColor": "noData",
-                    "time": "84732723"
-                },
-                {
-                    "title": "PC13",
-                    "statusColor": "stopped",
-                    "time": "18347493"
-                },
-                {
-                    "title": "PC14",
-                    "statusColor": "stopped",
-                    "time": "18347493"
-                },
-                {
-                    "title": "PC15",
-                    "statusColor": "stopped",
-                    "time": "18347493"
-                },
-                {
-                    "title": "PC16",
-                    "statusColor": "stopped",
-                    "time": "18347493"
-                }
-            ]
+          "icon": "/src/images/semProgramacao.jpg",
+          "value": "2"
+        },
+        {
+          "icon": "/src/images/parado.jpg",
+          "value": "4"
         }
-    ]
+      ],
+      "statusTable": [
+        {
+          "title": "PC02",
+          "statusColor": "stopped",
+          "time": "34774808"
+        },
+        {
+          "title": "PC04",
+          "statusColor": "producing",
+          "time": "NULL"
+        },
+        {
+          "title": "PC08",
+          "statusColor": "noProgramming",
+          "time": "NULL"
+        },
+        {
+          "title": "PC09",
+          "statusColor": "noData",
+          "time": "84732723"
+        },
+        {
+          "title": "PC10",
+          "statusColor": "stopped",
+          "time": "18347493"
+        },
+        {
+          "title": "PC11",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "PC17",
+          "statusColor": "noProgramming",
+          "time": "18347493"
+        },
+        {
+          "title": "PC18",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "PC19",
+          "statusColor": "stopped",
+          "time": "18347493"
+        },
+        {
+          "title": "PC20",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "PC21",
+          "statusColor": "stopped",
+          "time": "18347493"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "PRP GUIAS",
+      "link": "/prpGuias",
+      "availability": {
+        "title": "Disponibilidade",
+        "textValue": "50%",
+        "value": "0.5",
+        "icon": ""
+      },
+      "eficiency": {
+        "title": "Eficiência",
+        "textValue": "75%",
+        "value": "0.75",
+        "icon": ""
+      },
+      "produced": {
+        "title": "Produzido",
+        "textValue": "23568/45236",
+        "value": "23568/45236",
+        "icon": ""
+      },
+      "status": [
+        {
+          "title": "STATUS",
+          "link": "/tabelaStatus"
+        },
+        {
+          "icon": "/src/images/produzindo.jpg",
+          "value": "5"
+        },
+        {
+          "icon": "/src/images/semProgramacao.jpg",
+          "value": "2"
+        },
+        {
+          "icon": "/src/images/parado.jpg",
+          "value": "1"
+        }
+      ],
+      "statusTable": [
+        {
+          "title": "PC01",
+          "statusColor": "stopped",
+          "time": "34774808"
+        },
+        {
+          "title": "PC03",
+          "statusColor": "producing",
+          "time": "NULL"
+        },
+        {
+          "title": "PC05",
+          "statusColor": "noProgramming",
+          "time": "NULL"
+        },
+        {
+          "title": "PC12",
+          "statusColor": "noData",
+          "time": "84732723"
+        },
+        {
+          "title": "PC13",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "PC14",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "PC15",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "PC16",
+          "statusColor": "producing",
+          "time": "18347493"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "USI GUIAS",
+      "link": "/usiGuias",
+      "availability": {
+        "title": "Disponibilidade",
+        "textValue": "50%",
+        "value": "0.5",
+        "icon": ""
+      },
+      "eficiency": {
+        "title": "Eficiência",
+        "textValue": "75%",
+        "value": "0.75",
+        "icon": ""
+      },
+      "produced": {
+        "title": "Produzido",
+        "textValue": "23568/45236",
+        "value": "23568/45236",
+        "icon": ""
+      },
+      "status": [
+        {
+          "title": "STATUS",
+          "link": "/tabelaStatus"
+        },
+        {
+          "icon": "/src/images/produzindo.jpg",
+          "value": "15"
+        },
+        {
+          "icon": "/src/images/semProgramacao.jpg",
+          "value": "5"
+        },
+        {
+          "icon": "/src/images/parado.jpg",
+          "value": "4"
+        }
+      ],
+      "statusTable": [
+        {
+          "title": "CNC02",
+          "statusColor": "stopped",
+          "time": "34774808"
+        },
+        {
+          "title": "CNC03",
+          "statusColor": "producing",
+          "time": "NULL"
+        },
+        {
+          "title": "CNC04",
+          "statusColor": "noProgramming",
+          "time": "NULL"
+        },
+        {
+          "title": "CNC05",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "CNC06",
+          "statusColor": "producing",
+          "time": "18347493"
+        },
+        {
+          "title": "CNC07",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "RC06",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA07",
+          "statusColor": "noData",
+          "time": "84732723"
+        },
+        {
+          "title": "TA08",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA09",
+          "statusColor": "stopped",
+          "time": "84732723"
+        },
+        {
+          "title": "TA10",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA11",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA12",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA13",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA14",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA15",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA16",
+          "statusColor": "noProgramming",
+          "time": "84732723"
+        },
+        {
+          "title": "TA17",
+          "statusColor": "noProgramming",
+          "time": "84732723"
+        },
+        {
+          "title": "TA18",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA21",
+          "statusColor": "noData",
+          "time": "84732723"
+        },
+        {
+          "title": "TA22",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA23",
+          "statusColor": "producing",
+          "time": "84732723"
+        },
+        {
+          "title": "TA25",
+          "statusColor": "noProgramming",
+          "time": "84732723"
+        },
+        {
+          "title": "TA26",
+          "statusColor": "noProgramming",
+          "time": "84732723"
+        }
+      ]
+    }
+  ]
 }

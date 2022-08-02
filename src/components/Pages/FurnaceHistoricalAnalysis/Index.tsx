@@ -1,22 +1,23 @@
+//Tela de análise histórica de temperaturas do forno selecionado
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Title from '../../GeneralComponents/Title';
-import { HistoricalLineChart } from '../../StatisticsComponents/HistoricalLineChart';
-import { PieChart } from '../../StatisticsComponents/PieChart';
+import { MachineHistoricalLineChart } from '../../StatisticsComponents/MachineHistoricalLineChart';
 import { Box, Container } from '@mui/system';
 import { Divider, Grid, Typography } from '@mui/material';
-import HistoricalDataProgressBar from '../../StatisticsComponents/HistoricalDataProgressBar'
+import FurnaceSelector from '../../GeneralComponents/FurnaceSelector'
 import InitialDateSelector from '../../GeneralComponents/InitialDateSelector'
 import FinalDateSelector from '../../GeneralComponents/FinalDateSelector'
+import TimeSelector from '../../GeneralComponents/TimeSelector';
 import QueryButton from '../../GeneralComponents/QueryButton'
-import FurnaceSelector from '../../GeneralComponents/FurnaceSelector'
-import HistoricalTable from '../../StatisticsComponents/HistoricalTable';
 import PrintButton from '../../GeneralComponents/PrintButton';
 import ExportExcelButton from '../../GeneralComponents/ExportExcelButton';
-import TimeSelector from '../../GeneralComponents/TimeSelector';
+import MachineHistoricalTable from '../../StatisticsComponents/MachineHistoricalTable';
+
+
 
 const drawerWidth: number = 240;
 
@@ -170,7 +171,7 @@ function FurnaceHistoricalAnalysis() {
 
                                     }}
                                 >
-                                    <HistoricalLineChart />
+                                    <MachineHistoricalLineChart />
                                 </Grid>
                                 <Divider sx={{ position: 'relative', top: '0.6rem', left: '0.02rem' }} />
                             </Grid>
@@ -192,7 +193,7 @@ function FurnaceHistoricalAnalysis() {
                                         borderRadius: '1rem'
                                     }}
                                 >
-                                    <HistoricalTable />
+                                    <MachineHistoricalTable />
                                 </Grid>
                                 <Divider sx={{ position: 'relative', top: '0.6rem' }} />
                             </Grid>

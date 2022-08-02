@@ -1,3 +1,4 @@
+//Tabela de histórico de produção de máquina
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -81,7 +82,7 @@ const rows = [
  
 ];
 
-export default function HistoricalTable() {
+export default function MachineHistoricalTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 

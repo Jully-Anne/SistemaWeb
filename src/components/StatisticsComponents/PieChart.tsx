@@ -1,3 +1,4 @@
+//Gráfico de pizza com informações de porcentagem em relação ao tempo de disponibilidade da máquina selecionada
 import { Chart } from "react-google-charts";
 
 export const data = [
