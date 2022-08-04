@@ -1,13 +1,13 @@
 import { Typography } from '@mui/material'
 import { useAuth } from 'react-oidc-context'
 
-import AppProtected from './components/AppProtected'
-import AppUnprotected from './components/AppUnprotected'
+import AppProtected from './pages/AppProtected/Index'
+import AppUnprotected from './pages/AppUnprotected/Index'
 
 const App = () => {
   const auth = useAuth()
 
-    return (<AppProtected />)
+  return (<AppProtected />)
 
 
 }
