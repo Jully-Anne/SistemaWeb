@@ -14,9 +14,8 @@ import TimeSelector from '../../components/TimeSelector/Index'
 import QueryButton from '../../components/QueryButton/Index'
 import PrintButton from '../../components/PrintButton/Index'
 import ExportExcelButton from '../../components/ExportExcelButton/Index'
-import { MachineHistoricalLineChart } from '../../components/MachineHistoricalLineChart/Index'
-import MachineHistoricalTable from '../../components/MachineHistoricalTable/Index'
-
+import { FurnaceHistoricalLineChart } from '../../components/FurnaceHistoricalLineChart/Index'
+import FurnaceHistoricalTable from '../../components/FurnaceHistoricalTable/Index'
 
 const drawerWidth: number = 240;
 
@@ -170,12 +169,12 @@ function FurnaceHistoricalAnalysis() {
 
                                     }}
                                 >
-                                    <MachineHistoricalLineChart />
+                                    <FurnaceHistoricalLineChart />
                                 </Grid>
                                 <Divider sx={{ position: 'relative', top: '0.6rem', left: '0.02rem' }} />
                             </Grid>
                             {/* HistoricalTable */}
-                            <Grid item xs={5} md={7} lg={7}>
+                            <Grid item  xs={8} sm={10} md={11} lg={18}>
                                 <Grid
                                     sx={{
                                         mt: 0,
@@ -185,14 +184,14 @@ function FurnaceHistoricalAnalysis() {
                                         flexDirection: 'row',
                                         minHeight: '20rem',
                                         maxHeight: '35rem',
-                                        minWidth: '22rem',
-                                        maxWidth: "35rem",
+                                        minWidth: '5rem',
+                                        maxWidth: "70rem",
                                         border: 'solid',
                                         borderColor: '#DCDCDC',
                                         borderRadius: '1rem'
                                     }}
                                 >
-                                    <MachineHistoricalTable />
+                                    <FurnaceHistoricalTable />
                                 </Grid>
                                 <Divider sx={{ position: 'relative', top: '0.6rem' }} />
                             </Grid>
